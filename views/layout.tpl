@@ -22,7 +22,6 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/home">Home</a></li>
                     <li><a href="/contact">About</a></li>
                     <li><a href="/subgraph">Subgraph</a></li>
                     <li><a href="/Euler_cycle">Euler cycle</a></li>
