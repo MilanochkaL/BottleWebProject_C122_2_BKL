@@ -36,7 +36,7 @@
 		justify-content: space-between;
 	}
 	.jump_button:nth-child(2) {
-		background-color: #FFC7B6;
+		background-color: #CDDAD1;
 	}
 	.text_method{
 		height: 70%;
@@ -53,7 +53,7 @@
 		margin-right: 15px;
 	}
 	.block{
-		background-color: #FFC7B6;
+		background-color: #CDDAD1;
 		border-radius: 0 30px 30px 0;
 		padding: 5px;
 		height: 390px;
