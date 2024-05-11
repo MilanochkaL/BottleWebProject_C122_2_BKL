@@ -1,12 +1,24 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+    justify-content: center;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+    margin-left: auto; /* Центрирование контента по горизонтали */
+    margin-right: auto; /* Центрирование контента по горизонтали */
+    max-width: 100%; /* Контент занимает всю ширину экрана */
+}
+
+.text_fotter {
+    padding-left: 10px;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
