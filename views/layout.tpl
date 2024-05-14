@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - My Bottle Application</title>
+    <title>{{ title }}  &nbsp;</title>
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <link rel="shortcut icon" href="static\images\icon.png" type="image/x-icon">
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>
 
@@ -22,10 +23,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/contact">About</a></li>
-                    <li><a href="/subgraph">Subgraph</a></li>
-                    <li><a href="/Euler_cycle">Euler cycle</a></li>
-                    <li><a href="/find_nodes">Find nodes</a></li>
+                    <li><a href="/contact">О нас</a></li>
+                    <li><a href="/subgraph">Подграф</a></li>
+                    <li><a href="/find_nodes">Поиск вершин</a></li>
+                    <li><a href="/Euler_cycle">Поиск Эйлерова цикла</a></li>
                 </ul>
             </div>
         </div>
