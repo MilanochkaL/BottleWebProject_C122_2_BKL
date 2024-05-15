@@ -12,7 +12,7 @@
     padding: 20px;
     margin-bottom: 0px;
     padding: 40px;
-    font-size: 15px;
+    font-size: 17px;
 }
 .theorema{
     border-radius: 10px;
@@ -27,6 +27,21 @@
     background-color: #d7f6fc;
     margin: 20px;
     padding: 20px;
+}
+.theory_and_img{
+    display: flex;
+}
+
+.theory_and_img_el{
+    display: flex;
+    text-align: center;
+    margin: 15px;
+    margin-right: 60px;
+}
+.theory_and_img_el div{
+    min-width: 120px;
+    margin: 10px;
+    font-size: 12px;
 }
 </style>
 
@@ -52,6 +67,7 @@
       </p>
       </div>      
       <label>Доказательство:</label>
+      <div class="theory_and_img">
       <p>
       <ol>
          <li>Допустим в графе существует вершина с нечетной степенью. Рассмотрим эйлеров обход графа. 
@@ -62,6 +78,17 @@
          что нельзя пройти по их ребрам одним путем.</li>
        </ol>
       </p>
+          <div class="theory_and_img_el"> 
+              <div>
+                  <img src="static\images\find_an_Euler_cycle_or_chain_1.png" width="150px" height="150px">
+                  <p>Эйлерова пути нет. Количество вершин нечетной степени больше двух.</p>
+              </div>
+              <div>
+                  <img src="static\images\find_an_Euler_cycle_or_chain_2.png" width="200px" height="150px">
+                  <p>Две компоненты связности, одна имеет ребра.</p>
+               </div>
+          </div>
+      </div>
       <div  class="theorema">
       <label>Теорема:</label>
       <p>В графе G=(V,E) существует эйлеров цикл тогда и только тогда, когда:

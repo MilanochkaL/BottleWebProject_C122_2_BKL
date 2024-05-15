@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
     <link rel="shortcut icon" href="static\images\icon.png" type="image/x-icon">
+    <link rel="preload" href="static/fonts/ofont.ru_Kreadon.ttf" as="font">
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>
 

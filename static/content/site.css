@@ -53,8 +53,13 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
+@font-face {
+    font-family: 'Kreadon';
+    src: url('/static/fonts.ofont.ru_Kreadon.ttf') format('truetype');
+}
+
 .name_site {
-    background-image: url("/static/images/fon.png");
+    background-image: url("/static/images/fon.png");    
     width: 100%;
     text-align: center;
     background-size: cover;
@@ -71,6 +76,7 @@ input[type="checkbox"].input-validation-error {
 .heading_site {
     width: 100%;
     font-weight: bold;
+    font-family: 'Kreadon', sans-serif;
 }
 
 .jump_buttons_div {

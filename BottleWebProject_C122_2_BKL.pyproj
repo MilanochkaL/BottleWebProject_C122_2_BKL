@@ -53,7 +53,10 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="static\fonts\ofont.ru_Kreadon.ttf" />
     <Content Include="static\images\arrow.png" />
+    <Content Include="static\images\find_an_Euler_cycle_or_chain_1.png" />
+    <Content Include="static\images\find_an_Euler_cycle_or_chain_2.png" />
     <Content Include="static\images\fon.jpg" />
     <Content Include="static\images\fon.png" />
     <Content Include="static\images\icon.png" />
