@@ -87,7 +87,7 @@ input[type="checkbox"].input-validation-error {
     margin: 20px;
     text-align: center;
     width: 25%;
-    height: 270px;
+    min-height: 270px;
     background-color: #b1d9e1;
     justify-content: space-between;
 }
