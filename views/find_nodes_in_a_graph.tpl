@@ -1,6 +1,8 @@
 % rebase('layout.tpl', title="Поиск вершин", year=year)
 
-<h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
+<body class="background">
+    <div class = "rectangle">
+        <pre>{{data}}</pre>
+    </div>
 
-<p>Use this area to provide additional information.</p>
+</body>

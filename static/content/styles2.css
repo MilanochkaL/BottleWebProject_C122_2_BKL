@@ -1,0 +1,14 @@
+
+.background {
+    background-color: #a8b1e5;
+}
+
+.rectangle {
+    width: 90%;
+    height: 90vh;
+    margin: 15vh auto;
+    background-color: #FFFF;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom:0;
+}
