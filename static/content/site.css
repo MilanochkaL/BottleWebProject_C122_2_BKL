@@ -53,11 +53,6 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
-@font-face {
-    font-family: 'Kreadon';
-    src: url('/static/fonts.ofont.ru_Kreadon.ttf') format('truetype');
-}
-
 .name_site {
     background-image: url("/static/images/fon.png");    
     width: 100%;
@@ -73,11 +68,17 @@ input[type="checkbox"].input-validation-error {
     min-width: 100vh;    
 }
 
+@font-face {
+    font-family: 'Kreadon';
+    src: url('/static/fonts/ofont.ru_Kreadon.ttf') format('truetype');
+}
+
 .heading_site {
     width: 100%;
     font-weight: bold;
     font-family: 'Kreadon', sans-serif;
 }
+
 
 .jump_buttons_div {
     padding-left: 40px;
@@ -103,15 +104,17 @@ input[type="checkbox"].input-validation-error {
     }
 
 .text_method {
-    height: 60%;
+    height: 67%;
 }
 
 .name_method {
     height: 25%;
     margin: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     margin-top: 20px;
     font-weight: bold;
+    font-family: 'Kreadon', sans-serif;
+    font-size: 27px;
 }
 
 .description_method {
@@ -154,6 +157,8 @@ input[type="checkbox"].input-validation-error {
 
 .welcome_msg h3{
     margin-bottom: 35px;
+    font-family: 'Kreadon', sans-serif;
+    font-size: 28px;
 }
 
 .welcome_msg_button_and_text {
@@ -161,4 +166,9 @@ input[type="checkbox"].input-validation-error {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.welcome_msg h1 {
+    font-family: 'Kreadon', sans-serif;
+    font-size: 47px;
 }

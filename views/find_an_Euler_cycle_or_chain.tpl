@@ -43,6 +43,9 @@
     margin: 10px;
     font-size: 12px;
 }
+.theory_Euler_div h1{
+    font-family: 'Kreadon', sans-serif;
+}
 </style>
 
 <body class="backgroun_find_an_Euler">
