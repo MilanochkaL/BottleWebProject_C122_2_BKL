@@ -65,7 +65,7 @@ input[type="checkbox"].input-validation-error {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 100vh;    
+        
 }
 
 .heading_site {
@@ -79,6 +79,7 @@ input[type="checkbox"].input-validation-error {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .jump_button {
@@ -90,6 +91,7 @@ input[type="checkbox"].input-validation-error {
     min-height: 270px;
     background-color: #b1d9e1;
     justify-content: space-between;
+    min-width: 250px;
 }
 
     .jump_button:nth-child(2) {
@@ -97,6 +99,7 @@ input[type="checkbox"].input-validation-error {
     }
 
 .text_method {
+    min-height: 170px;
     height: 60%;
 }
 
