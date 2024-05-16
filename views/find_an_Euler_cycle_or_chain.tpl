@@ -1,6 +1,5 @@
 % rebase('layout.tpl', title='Эйлеров цикла', year=year)
 
-
 <body class="backgroun_find_an_Euler">
 	<div class="theory_Euler_div">
       <h1>Поиск Эйлерова цикла (или цепи) в Эйлеровом графе</h1>
@@ -120,10 +119,14 @@
         <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
         <input type="number" id="inputCount" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
       </div>      
+      <div id="graphs_div" style="display: flex;">
       <form id="myForm">
             <div id="inputContainer2" style="margin-left: 20px; margin-bottom: 10px;">
             </div>
       </form>
+      <div id="vis_graph"></div>
+      </div>
       <button onclick="addInputs()" margin="20px" class="anim_button">Добавить поля</button>
+      <button margin="20px" class="anim_button">Решить</button>
 	</div>    
 </body>
