@@ -54,3 +54,24 @@
     font-family: 'Kreadon', sans-serif;
 }
 
+.anim_button {
+    background-color: #FFFF;
+    border-radius: 10px;
+    background-color: #b1d9e1;
+    width: 180px;
+    height: 40px;
+}
+
+.anim_button {
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+    background-size: 200% auto;
+    background-position: left top;
+    border-color: transparent;
+    color: #464646;
+    transition: background-position 0.5s; 
+}
+
+.anim_button:hover {
+    background-position: right bottom;
+    color: #000;
+}

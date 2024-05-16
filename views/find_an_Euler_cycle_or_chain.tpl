@@ -118,12 +118,12 @@
       <p><a name="calc"></a></p>
       <div style="display: flex;">
         <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
-        <input type="number" id="inputCount" name="matrix-size" min="1" style="margin: 15px; height=8px; width: 120px" required>
+        <input type="number" id="inputCount" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
       </div>      
       <form id="myForm">
             <div id="inputContainer2" style="margin-left: 20px; margin-bottom: 10px;">
             </div>
       </form>
-      <button onclick="addInputs()" margin="20px">Добавить поля</button>
+      <button onclick="addInputs()" margin="20px" class="anim_button">Добавить поля</button>
 	</div>    
 </body>
