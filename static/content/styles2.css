@@ -33,7 +33,6 @@
     display: flex;
     font-size: 17px;
     margin-bottom: 10px;
-    line-height: 1.5;
 }
 
 
@@ -76,4 +75,13 @@
 .input {
     width: 40px;
     height: 30px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #a8b1e5;
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 10px;
 }

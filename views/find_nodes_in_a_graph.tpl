@@ -40,7 +40,7 @@
                 <p>Ясно, что всякий связный граф однозначно разбивается на ярусы относительно данной вершины.</p>
             </div>
 
-            <div class="definitions">
+            <div class="theory">
               <h3>Достижимость и связность в графах</h3>
               <label>Определение достижимости вершин</label>
                 <p>Если существует путь, идущий от вершины xi к вершине xj, то говорят, что вершина xj достижима для вершины xi. 
@@ -84,14 +84,14 @@
                 <p><a name="calc"></a></p>
                 <label>Калькулятор:</label>
                 <div class="text">
-                    <p>Колчество вершин</p>
+                    <p>Количество вершин: </p>
                     <form>
                         <select id="ver">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
-                                <option value="5">5</option>
+                                <option value="5" selected>5</option>
                                 <option value="6">6</option>
                                 <option value="7">7</option>
                                 <option value="8">8</option>
@@ -99,15 +99,14 @@
                                 <option value="10">10</option>
                         </select>
                     </form>
-
-                    <p>Колчество ребер</p>
+                    <p>Количество ребер: </p>
                     <form>
                         <select id="reb">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
-                                <option value="5">5</option>
+                                <option value="5" selected>5</option>
                                 <option value="6">6</option>
                                 <option value="7">7</option>
                                 <option value="8">8</option>
@@ -115,11 +114,56 @@
                                 <option value="10">10</option>
                         </select>
                     </form>
+                 </div>
             </div>
             <div class="text">
                   <p>k = </p>
                   <input class="input" type="text" name="input">
             </div>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td><input class="input" type="text" name="ver1"></td>
+                    <td><input class="input" type="text" name="ver2"></td>
+                    <td><input class="input" type="text" name="ver3"></td>
+                    <td><input class="input" type="text" name="ver4"></td>
+                    <td><input class="input" type="text" name="ver5"></td>
+                </tr>
+                <tr>
+                    <td><input class="input" type="text" name="reb1"></td>
+                    <td><input class="input" type="text" name="reb2"></td>
+                    <td><input class="input" type="text" name="reb3"></td>
+                    <td><input class="input" type="text" name="reb4"></td>
+                    <td><input class="input" type="text" name="reb5"></td>
+                </tr>
+                <tr>
+                    <td><input class="input" type="text" name="row3_1"></td>
+                    <td><input class="input" type="text" name="row3_2"></td>
+                    <td><input class="input" type="text" name="row3_3"></td>
+                    <td><input class="input" type="text" name="row3_4"></td>
+                    <td><input class="input" type="text" name="row3_5"></td>
+                </tr>
+                <tr>
+                    <td><input class="input" type="text" name="row4_1"></td>
+                    <td><input class="input" type="text" name="row4_2"></td>
+                    <td><input class="input" type="text" name="row4_3"></td>
+                    <td><input class="input" type="text" name="row4_4"></td>
+                    <td><input class="input" type="text" name="row4_5"></td>
+                </tr>
+                <tr>
+                    <td><input class="input" type="text" name="row5_1"></td>
+                    <td><input class="input" type="text" name="row5_2"></td>
+                    <td><input class="input" type="text" name="row5_3"></td>
+                    <td><input class="input" type="text" name="row5_4"></td>
+                    <td><input class="input" type="text" name="row5_5"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <p><a class="btn">Решить</a></p>
+        </div>
+            
     </div>
 
 </body>
