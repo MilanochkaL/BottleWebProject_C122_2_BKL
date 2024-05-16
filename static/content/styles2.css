@@ -29,7 +29,34 @@
         font-size: 25px;
     }
 
-.text {
+
+.definitions {
+    border-radius: 10px;
+    background-color: #a8b1e5;
+    margin: 20px;
+    padding: 20px;
+    font-size: 17px;
+}
+
+.theory {
+    border-radius: 10px;
+    border-color: #b1d9e1;
+    padding: 10px;
+    border-width: 2px;
+    border-style: solid;
+    margin: 10px;
+    font-size: 17px;
+}
+
+.theory_and_img {
     display: flex;
-    font-size: 20px;
+    text-align: center;
+    margin: 15px;
+    margin-right: 60px;
+    font-size: 17px;
+}
+
+.theory2 {
+    margin: 10px;
+    font-size: 17px;
 }
