@@ -1,10 +1,7 @@
 % rebase('layout.tpl', title="Поиск вершин", year=year)
-
 <body class="background">
     <div class = "rectangle">
-        <div class = "center">
-        </div>
-            <h1>Поиск в графе вершин, имеющих наибольшее окружение</h1>
+        <h1 class="center">Поиск в графе вершин, имеющих наибольшее окружение</h1>
             <h3><a href="#calc">Перейти к калькулятору</a></h3>
             <div class="definitions">
                 <h3>Основные определения</h3>
@@ -28,7 +25,7 @@
                 p-1 (deg (v)=p-1).</p>
             </div>
 
-            <div class="definitions">
+            <div class="theory">
                 <h3>Расстояние между вершинами и ярусы</h3>
                 <p><b>Длиной маршрута</b> называется количество ребер в нем (с повторениями). 
                 Если маршрут М=v0, e1, v1, e2, v2, …, ek, vk, то длина М равна k (обозначается |M|=k ).</p>
@@ -43,9 +40,8 @@
                 <p>Ясно, что всякий связный граф однозначно разбивается на ярусы относительно данной вершины.</p>
             </div>
 
-            <h3>Достижимость и связность в графах</h3>
-
-            <div class="theory">
+            <div class="definitions">
+              <h3>Достижимость и связность в графах</h3>
               <label>Определение достижимости вершин</label>
                 <p>Если существует путь, идущий от вершины xi к вершине xj, то говорят, что вершина xj достижима для вершины xi. 
                     <p>Пусть задан неориентированный граф G=〈X,Г〉 и его матрица смежности A. 
@@ -83,47 +79,47 @@
                 поэтому доста¬точно хранить только верхнюю (или нижнюю) треугольную матрицу.</p>
             </div>
 
-                
-            
-
-                <p><a name="xz"></a></p> 
+               
+            <div class="decision">
+                <p><a name="calc"></a></p>
+                <label>Калькулятор:</label>
                 <div class="text">
                     <p>Колчество вершин</p>
                     <form>
                         <select id="ver">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
                         </select>
                     </form>
 
                     <p>Колчество ребер</p>
                     <form>
                         <select id="reb">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
                         </select>
                     </form>
-                </div>
-                <div class="text">
-                    <p>k   </p>
-                    <input type="text" name="input" placeholder="Введите значение k">
-                </div>
+            </div>
+            <div class="text">
+                  <p>k = </p>
+                  <input class="input" type="text" name="input">
+            </div>
     </div>
 
 </body>
