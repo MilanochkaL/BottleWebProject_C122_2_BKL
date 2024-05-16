@@ -1,0 +1,51 @@
+.backgroun_find_an_Euler {
+    background-color: #b1d9e1;
+}
+
+.theory_Euler_div {
+    width: 90%;
+    margin: 15vh auto;
+    background-color: #FFFF;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 0px;
+    padding: 40px;
+    font-size: 17px;
+}
+
+.theorema {
+    border-radius: 10px;
+    border-color: #b1d9e1;
+    padding: 10px;
+    border-width: 2px;
+    border-style: solid;
+    margin: 15px;
+}
+
+.opred {
+    border-radius: 10px;
+    background-color: #d7f6fc;
+    margin: 20px;
+    padding: 20px;
+}
+
+.theory_and_img {
+    display: flex;
+}
+
+.theory_and_img_el {
+    display: flex;
+    text-align: center;
+    margin: 15px;
+    margin-right: 60px;
+}
+
+    .theory_and_img_el div {
+        min-width: 120px;
+        margin: 10px;
+        font-size: 12px;
+    }
+
+.theory_Euler_div h1 {
+    font-family: 'Kreadon', sans-serif;
+}
