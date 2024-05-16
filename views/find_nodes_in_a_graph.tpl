@@ -79,43 +79,9 @@
                 поэтому доста¬точно хранить только верхнюю (или нижнюю) треугольную матрицу.</p>
             </div>
 
-               
-            <div class="decision">
-                <p><a name="calc"></a></p>
-                <label>Калькулятор:</label>
-                <div class="text">
-                    <p>Количество вершин: </p>
-                    <form>
-                        <select id="ver">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5" selected>5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                        </select>
-                    </form>
-                    <p>Количество ребер: </p>
-                    <form>
-                        <select id="reb">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5" selected>5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                        </select>
-                    </form>
-                 </div>
-            </div>
+            
+            <label>Калькулятор:</label>
+                
             <div class="text">
                   <p>k = </p>
                   <input class="input" type="text" name="input">
@@ -130,7 +96,8 @@
                 </div>
           </form>
           <button onclick="addInputs()" margin="20px">Добавить поля</button>
-	    </div>    
+	    </div>  
+        
         <div>
             <p><a class="btn">Решить</a></p>
         </div>
