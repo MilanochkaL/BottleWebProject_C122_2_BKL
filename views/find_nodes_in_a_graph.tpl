@@ -121,45 +121,16 @@
                   <input class="input" type="text" name="input">
             </div>
 
-        <table>
-            <tbody>
-                <tr>
-                    <td><input class="input" type="text" name="ver1"></td>
-                    <td><input class="input" type="text" name="ver2"></td>
-                    <td><input class="input" type="text" name="ver3"></td>
-                    <td><input class="input" type="text" name="ver4"></td>
-                    <td><input class="input" type="text" name="ver5"></td>
-                </tr>
-                <tr>
-                    <td><input class="input" type="text" name="reb1"></td>
-                    <td><input class="input" type="text" name="reb2"></td>
-                    <td><input class="input" type="text" name="reb3"></td>
-                    <td><input class="input" type="text" name="reb4"></td>
-                    <td><input class="input" type="text" name="reb5"></td>
-                </tr>
-                <tr>
-                    <td><input class="input" type="text" name="row3_1"></td>
-                    <td><input class="input" type="text" name="row3_2"></td>
-                    <td><input class="input" type="text" name="row3_3"></td>
-                    <td><input class="input" type="text" name="row3_4"></td>
-                    <td><input class="input" type="text" name="row3_5"></td>
-                </tr>
-                <tr>
-                    <td><input class="input" type="text" name="row4_1"></td>
-                    <td><input class="input" type="text" name="row4_2"></td>
-                    <td><input class="input" type="text" name="row4_3"></td>
-                    <td><input class="input" type="text" name="row4_4"></td>
-                    <td><input class="input" type="text" name="row4_5"></td>
-                </tr>
-                <tr>
-                    <td><input class="input" type="text" name="row5_1"></td>
-                    <td><input class="input" type="text" name="row5_2"></td>
-                    <td><input class="input" type="text" name="row5_3"></td>
-                    <td><input class="input" type="text" name="row5_4"></td>
-                    <td><input class="input" type="text" name="row5_5"></td>
-                </tr>
-            </tbody>
-        </table>
+        <div style="display: flex;">
+            <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
+            <input type="number" id="inputCount" name="matrix-size" min="1" style="margin: 15px; height=8px; width: 120px" required>
+          </div>      
+          <form id="myForm">
+                <div id="inputContainer2" style="margin-left: 20px; margin-bottom: 10px;">
+                </div>
+          </form>
+          <button onclick="addInputs()" margin="20px">Добавить поля</button>
+	    </div>    
         <div>
             <p><a class="btn">Решить</a></p>
         </div>
