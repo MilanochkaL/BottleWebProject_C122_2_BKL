@@ -14,13 +14,14 @@
     padding: 40px;
     font-size: 17px;
 }
+
 .theorema{
     border-radius: 10px;
     border-color: #b1d9e1;
     padding: 10px;
     border-width: 2px;
     border-style: solid;
-    margin: 10px;
+    margin: 15px;
 }
 .opred{
     border-radius: 10px;
@@ -47,6 +48,11 @@
     font-family: 'Kreadon', sans-serif;
 }
 </style>
+
+<script>
+
+
+</script>
 
 <body class="backgroun_find_an_Euler">
 	<div class="theory_Euler_div">

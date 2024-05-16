@@ -24,10 +24,16 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/contact">О нас</a></li>
-                    <li><a href="/subgraph">Подграф</a></li>
-                    <li><a href="/find_nodes">Поиск вершин</a></li>
-                    <li><a href="/Euler_cycle">Поиск Эйлерова цикла</a></li>
+                    <li><a href="/contact">Об авторах</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Графы<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/subgraph">Нахождение подграфа в графе</a></li>
+                            <li><a href="/find_nodes">Поиск вершин</a></li>
+                            <li><a href="/Euler_cycle">Поиск Эйлерова цикла</a></li>
+                        </ul>
+                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -44,6 +50,6 @@
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>
-
+    
 </body>
 </html>
