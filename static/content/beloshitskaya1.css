@@ -1,4 +1,5 @@
 
+/*Страница контакты*/
 .authors-heading {
     margin-top: 70px;
     text-align: center;
@@ -84,4 +85,60 @@
     color: #888;
     text-align: center;
     width: 100%;
+}
+
+/*Страница поиска подграфов*/
+
+.background_subgraph {
+    background-color: #b1d9e1;
+}
+
+.theory_subgraph_div {
+    width: 90%;
+    margin: 15vh auto;
+    background-color: #FFFF;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 0px;
+    padding: 40px;
+    font-size: 17px;
+}
+
+.theorema {
+    border-radius: 10px;
+    border-color: #b1d9e1;
+    padding: 10px;
+    border-width: 2px;
+    border-style: solid;
+    margin: 15px;
+}
+
+.definition {
+    border-radius: 10px;
+    background-color: #d7f6fc;
+    margin: 20px;
+    padding: 20px;
+}
+.theory {
+    margin-bottom: 20px;
+}
+
+.theory_and_img{
+    display: flex;
+    text-align: center;
+    margin: 15px;
+    margin-right: 60px;
+    justify-content:center;
+    align-content:center;
+}
+
+    .theory_and_img div {
+        min-width: 120px;
+        margin: 10px;
+        font-size: 15px;
+        color: #666;
+    }
+
+.theory_subgraph_div h1 {
+    font-family: 'Kreadon', sans-serif;
 }
