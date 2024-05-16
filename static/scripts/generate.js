@@ -23,7 +23,7 @@ function addInputs() {
         let container2 = document.getElementById(divName); // Это место для новых полей
         for (let i = 0; i < numberOfInputs; i++) {
             let input = document.createElement('input');
-            input.style = "width: 30px; margin: 3px; border-radius: 10px; border-color: #90b0b6; border-width: 2px; border-style: solid;";
+            input.style = "width: 30px; margin: 3px; border-radius: 10px; border-color: #a8b1e5; border-width: 2px; border-style: solid;";
             input.name = `dynamicInput${i}`; // Имена для каждого поля для избежания ошибок
             container2.appendChild(input); // Добавляем новое поле в контейнер
             container2.appendChild(document.createElement('br')); // Предусматриваем дополнительное пространство между полями
