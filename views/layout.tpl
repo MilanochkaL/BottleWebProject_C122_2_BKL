@@ -51,6 +51,7 @@
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>
+    <script src="/static/scripts/generate.js"></script>
     
 </body>
 </html>
