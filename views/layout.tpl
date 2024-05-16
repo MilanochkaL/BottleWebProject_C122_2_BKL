@@ -6,6 +6,7 @@
     <title>{{ title }}  &nbsp;</title>
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/beloshitskaya1.css" />
     <link rel="shortcut icon" href="static\images\icon.png" type="image/x-icon">
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>

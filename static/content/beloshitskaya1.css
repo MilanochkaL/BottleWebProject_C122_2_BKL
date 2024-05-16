@@ -1,0 +1,87 @@
+
+.authors-heading {
+    margin-top: 70px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.profiles {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-card {
+    width: 900px;
+    min-height: 250px;
+    background-color: #d7f6fc;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+    .profile-card:nth-child(2) {
+        background-color: #c5cdfb;
+    }
+
+    .profile-card:nth-child(3) {
+        background-color: #d7f6fc;
+    }
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+
+.profile-info {
+    margin-left: 80px;
+    width: 500px;
+    text-align: left;
+    font-size: 17px;
+    border-right: 3px #32a1ce groove;
+}
+
+    .profile-info h2 {
+        margin-left: 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .profile-info p {
+        margin: 5px 0;
+        text-align: left;
+    }
+
+.contact-info {
+    margin-top: 20px;
+}
+
+    .contact-info p,
+    .contact-info a {
+        margin: 5px 0;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: left;
+    }
+
+.phone-icon,
+.email-icon {
+    margin-right: 5px;
+}
+
+.support {
+    color: #888;
+    text-align: center;
+    width: 100%;
+}
