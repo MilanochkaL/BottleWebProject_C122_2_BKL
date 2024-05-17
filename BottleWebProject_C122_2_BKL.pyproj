@@ -54,7 +54,7 @@
     <Content Include="static\content\bootstrap.min.css" />
     <Content Include="static\content\lokteva3.css" />
     <Content Include="static\content\site.css" />
-    <Content Include="static\content\styles2.css">
+    <Content Include="static\content\kuznetsova2.css">
       <SubType>Code</SubType>
     </Content>
     <Content Include="static\fonts\BauhausC-Light.otf" />

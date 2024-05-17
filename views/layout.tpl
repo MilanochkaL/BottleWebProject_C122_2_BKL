@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/static/content/beloshitskaya1.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/lokteva3.css" />
     <link rel="shortcut icon" href="static\images\icon.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="/static/content/styles2.css">
+    <link rel="stylesheet" type="text/css" href="/static/content/kuznetsova2.css">
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>
 
