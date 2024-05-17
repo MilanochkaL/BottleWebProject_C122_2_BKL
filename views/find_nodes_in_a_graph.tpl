@@ -99,8 +99,8 @@
           </form>
           <button class ="anim_button_1" onclick="addInputs()" >Добавить поля</button>
         
-        <div class="anim_button_1">
-            <p >Решить</p>
+        <div >
+            <p class="anim_button_1">Решить</p>
         </div>
     </div>
             
