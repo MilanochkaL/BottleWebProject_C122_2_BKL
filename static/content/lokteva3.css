@@ -69,7 +69,6 @@
     border-color: transparent;
     color: #464646;
     transition: background-position 0.5s;
-    text-align: center;
 }
 
 .anim_button:hover {
