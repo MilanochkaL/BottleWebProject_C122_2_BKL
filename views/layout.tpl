@@ -6,7 +6,9 @@
     <title>{{ title }}  &nbsp;</title>
     <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/lokteva3.css" />
     <link rel="shortcut icon" href="static\images\icon.png" type="image/x-icon">
+    <link rel="preload" href="static/fonts/ofont.ru_Kreadon.ttf" as="font">
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>
 
@@ -23,10 +25,16 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/contact">О нас</a></li>
-                    <li><a href="/subgraph">Подграф</a></li>
-                    <li><a href="/find_nodes">Поиск вершин</a></li>
-                    <li><a href="/Euler_cycle">Поиск Эйлерова цикла</a></li>
+                    <li><a href="/contact">Об авторах</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Графы<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/subgraph">Нахождение подграфа в графе</a></li>
+                            <li><a href="/find_nodes">Поиск вершин</a></li>
+                            <li><a href="/Euler_cycle">Поиск Эйлерова цикла</a></li>
+                        </ul>
+                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -43,6 +51,7 @@
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>
-
+    <script src="/static/scripts/generate.js"></script>
+    
 </body>
 </html>

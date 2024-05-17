@@ -30,6 +30,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="find_an_Euler_cycle_or_chain.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes.py" />
   </ItemGroup>
   <ItemGroup>
@@ -44,18 +47,23 @@
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
+    <Content Include="static\content\lokteva3.css" />
     <Content Include="static\content\site.css" />
     <Content Include="static\fonts\BauhausC-Light.otf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="static\fonts\ofont.ru_Kreadon.ttf" />
     <Content Include="static\images\arrow.png" />
+    <Content Include="static\images\find_an_Euler_cycle_or_chain_1.png" />
+    <Content Include="static\images\find_an_Euler_cycle_or_chain_2.png" />
     <Content Include="static\images\fon.jpg" />
     <Content Include="static\images\fon.png" />
     <Content Include="static\images\icon.png" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
+    <Content Include="static\scripts\generate.js" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="static\scripts\jquery-1.10.2.js" />
     <Content Include="static\scripts\jquery-1.10.2.min.js" />
