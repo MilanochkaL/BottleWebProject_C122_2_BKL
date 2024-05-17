@@ -56,10 +56,13 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="static\images\adjacency_matrix.png" />
+    <Content Include="static\images\adjacency_matrix_formula.png" />
     <Content Include="static\images\arrow.png" />
     <Content Include="static\images\fon.jpg" />
     <Content Include="static\images\fon.png" />
     <Content Include="static\images\icon.png" />
+    <Content Include="static\images\reachability_formula.png" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\generate2.js">
