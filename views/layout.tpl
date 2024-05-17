@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
     <link rel="stylesheet" type="text/css" href="/static/content/lokteva3.css" />
     <link rel="shortcut icon" href="static\images\icon.png" type="image/x-icon">
-    <link rel="preload" href="static/fonts/ofont.ru_Kreadon.ttf" as="font">
+    <link rel="stylesheet" type="text/css" href="/static/content/styles2.css">
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>
 
@@ -53,5 +53,7 @@
     <script src="/static/scripts/respond.js"></script>
     <script src="/static/scripts/generate.js"></script>
     
+    <script src="/static/scripts/generate2.js"></script>
+
 </body>
 </html>
