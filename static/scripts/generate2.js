@@ -1,13 +1,13 @@
 function addInputs() {
     let numberOfInputs = parseInt(document.getElementById('inputCount').value);
     if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 10) {
-        alert('Введите корректное число от 1 до 10. В противном случае что-то может пойти не так!');
+        alert('Р’РІРµРґРёС‚Рµ РєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 10. Р’ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ С‡С‚Рѕ-С‚Рѕ РјРѕР¶РµС‚ РїРѕР№С‚Рё РЅРµ С‚Р°Рє!');
         return;
     }
 
-    let container = document.getElementById('inputContainer2'); // Это место для новых полей
+    let container = document.getElementById('inputContainer2'); // Р­С‚Рѕ РјРµСЃС‚Рѕ РґР»СЏ РЅРѕРІС‹С… РїРѕР»РµР№
     while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild); // Освобождаем место от старых элементов
+        container.removeChild(container.lastChild); // РћСЃРІРѕР±РѕР¶РґР°РµРј РјРµСЃС‚Рѕ РѕС‚ СЃС‚Р°СЂС‹С… СЌР»РµРјРµРЅС‚РѕРІ
     }
 
     let divNames = [];
@@ -18,15 +18,15 @@ function addInputs() {
         let div = document.createElement('div');
         div.id = divName;
         div.style = "display: flex"
-        container.appendChild(div); // Добавляем новое поле в контейнер
+        container.appendChild(div); // Р”РѕР±Р°РІР»СЏРµРј РЅРѕРІРѕРµ РїРѕР»Рµ РІ РєРѕРЅС‚РµР№РЅРµСЂ
 
-        let container2 = document.getElementById(divName); // Это место для новых полей
+        let container2 = document.getElementById(divName); // Р­С‚Рѕ РјРµСЃС‚Рѕ РґР»СЏ РЅРѕРІС‹С… РїРѕР»РµР№
         for (let i = 0; i < numberOfInputs; i++) {
             let input = document.createElement('input');
             input.style = "width: 30px; margin: 3px; border-radius: 10px; border-color: #a8b1e5; border-width: 2px; border-style: solid;";
-            input.name = `dynamicInput${i}`; // Имена для каждого поля для избежания ошибок
-            container2.appendChild(input); // Добавляем новое поле в контейнер
-            container2.appendChild(document.createElement('br')); // Предусматриваем дополнительное пространство между полями
+            input.name = `dynamicInput${i}`; // РРјРµРЅР° РґР»СЏ РєР°Р¶РґРѕРіРѕ РїРѕР»СЏ РґР»СЏ РёР·Р±РµР¶Р°РЅРёСЏ РѕС€РёР±РѕРє
+            container2.appendChild(input); // Р”РѕР±Р°РІР»СЏРµРј РЅРѕРІРѕРµ РїРѕР»Рµ РІ РєРѕРЅС‚РµР№РЅРµСЂ
+            container2.appendChild(document.createElement('br')); // РџСЂРµРґСѓСЃРјР°С‚СЂРёРІР°РµРј РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ РјРµР¶РґСѓ РїРѕР»СЏРјРё
         }
     }
 }
