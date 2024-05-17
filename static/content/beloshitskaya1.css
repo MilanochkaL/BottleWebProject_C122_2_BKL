@@ -17,7 +17,7 @@
 }
 
 .profile-card {
-    width: 900px;
+    width: 1000px;
     min-height: 250px;
     background-color: #d7f6fc;
     padding: 20px;
@@ -76,9 +76,10 @@
         text-align: left;
     }
 
-.phone-icon,
-.email-icon {
+.icon {
     margin-right: 5px;
+    width:30px;
+    height:30px;
 }
 
 .support {
