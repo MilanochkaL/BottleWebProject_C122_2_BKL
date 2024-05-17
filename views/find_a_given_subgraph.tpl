@@ -82,26 +82,24 @@
       
 	</div>    
 
-    <div class = "rectangle">
-            <p><a name="calc"></a></p>
-            <label class="size_text">Калькулятор:</label>
-                
-            <div class="text">
-                  <p>k = </p>
-                  <input class="input" type="text" name="input">
-            </div>
+<div class="theory_subgraph_div">
 
-        <div style="display: flex;">
-            <h3 class = "text">Размерность матрицы:</h3> 
-            <input type="number" id="inputCount" name="matrix-size" min="1" class="input2" required>
-          </div>      
-          <form id="myForm">
-                <div id="inputContainer2" class="form">
-                </div>
-          </form>
-          <button class ="anim_button" onclick="addInputs()" >Добавить поля</button>
-        
-        <div class="anim_button">
-            <p >Решить</p>
-        </div>
+  <p><a name="calc"></a></p>
+  <div style="display: flex;">
+  <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
+  <input type="number" id="inputCount" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
+  </div>      
+  <div id="graphs_div" style="display: flex;">
+  <form id="myForm">
+      <div id="inputContainer2" style="margin-left: 20px; margin-bottom: 10px;">
+      </div>
+  </form>
+  <div id="vis_graph"></div>
+  </div>
+  <button onclick="addInputs()" margin="20px" class="anim_button">Добавить поля</button>
+  <button onclick="createGraph()" margin="20px" class="anim_button">Создать граф</button>
+  <button margin="20px"  class="anim_button">Решить</button>
+  <div id="mynetwork"></div>
+
+
 </body>

@@ -73,6 +73,7 @@
     <Content Include="static\images\reachability_formula.png" />
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
+    <Content Include="static\scripts\generate1.js" />
     <Content Include="static\scripts\generate2.js">
       <SubType>Code</SubType>
     </Content>
