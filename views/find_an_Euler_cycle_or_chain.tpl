@@ -2,33 +2,41 @@
 
 <script>
 
-function addGraph(){
-    let container = document.getElementById('graph_div'); // Получаем контейнер для графа
+function addGraph() {
+    let container = document.getElementById('graph_div');
     while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild); // Освобождаем место от старых элементов
+        container.removeChild(container.lastChild);
     }
     let div = document.createElement('div');
     div.id = "mynetwork";
-    div.className = "mynetwork"; // Заменил "class" на "className"
-    container.appendChild(div); // Добавляем новый div для графа в контейнер
+    div.className = "mynetwork";
+    container.appendChild(div);
 
-    // Создание данных для графа
-    var nodes = new vis.DataSet([
-        {id: 1, label: 'Node 1'},
-        {id: 2, label: 'Node 2'},
-        {id: 3, label: 'Node 3'}
-    ]);
+    let inputContainer = document.getElementById('inputContainer2');
+    let matrixRows = inputContainer.children;
+    let nodes = [];
+    let edges = [];
 
-    var edges = new vis.DataSet([
-        {from: 1, to: 2},
-        {from: 1, to: 3},
-        {from: 2, to: 3}
-    ]);
+    // Create nodes
+    for (let i = 0; i < matrixRows.length; i++) {
+        nodes.push({ id: i + 1, label: `Node ${i + 1}` });
+    }
 
-    // Создание опций для отображения графа
+    // Create edges
+    for (let i = 0; i < matrixRows.length; i++) {
+        let rowInputs = matrixRows[i].children;
+        for (let j = i; j < rowInputs.length; j += 2) {
+            let inputValue = rowInputs[j].value;
+            if (inputValue === '1') {
+                edges.push({ from: i + 1, to: j / 2 + 1 });
+            }
+        }
+    }
+
+    // Network options
     var options = {};
 
-    // Создание сетевого объекта и отображение графа
+    // Create network data and display the graph
     var networkContainer = document.getElementById('mynetwork');
     var data = {
         nodes: nodes,
@@ -36,6 +44,7 @@ function addGraph(){
     };
     var network = new vis.Network(networkContainer, data, options);
 }
+
 
 </script>
 
