@@ -4,16 +4,6 @@
     margin-top: 15px;
 }
 
-.rectangle {
-    width: 90%;
-    margin: 10vh auto;
-    background-color: #FFFF;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom:0;
-
-}
-
 .center {
     align-items: center;
     justify-content: center;
