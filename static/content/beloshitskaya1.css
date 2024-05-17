@@ -138,6 +138,9 @@
         font-size: 15px;
         color: #666;
     }
+    .theory_and_img p{
+        margin-top:10px;
+    }
 
 .theory_subgraph_div h1 {
     font-family: 'Kreadon', sans-serif;
