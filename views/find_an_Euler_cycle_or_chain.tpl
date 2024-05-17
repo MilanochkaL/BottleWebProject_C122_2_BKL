@@ -1,5 +1,44 @@
 % rebase('layout.tpl', title='Эйлеров цикла', year=year)
 
+<script>
+
+function addGraph(){
+    let container = document.getElementById('graph_div'); // Получаем контейнер для графа
+    while (container.hasChildNodes()) {
+        container.removeChild(container.lastChild); // Освобождаем место от старых элементов
+    }
+    let div = document.createElement('div');
+    div.id = "mynetwork";
+    div.className = "mynetwork"; // Заменил "class" на "className"
+    container.appendChild(div); // Добавляем новый div для графа в контейнер
+
+    // Создание данных для графа
+    var nodes = new vis.DataSet([
+        {id: 1, label: 'Node 1'},
+        {id: 2, label: 'Node 2'},
+        {id: 3, label: 'Node 3'}
+    ]);
+
+    var edges = new vis.DataSet([
+        {from: 1, to: 2},
+        {from: 1, to: 3},
+        {from: 2, to: 3}
+    ]);
+
+    // Создание опций для отображения графа
+    var options = {};
+
+    // Создание сетевого объекта и отображение графа
+    var networkContainer = document.getElementById('mynetwork');
+    var data = {
+        nodes: nodes,
+        edges: edges
+    };
+    var network = new vis.Network(networkContainer, data, options);
+}
+
+</script>
+
 <body class="backgroun_find_an_Euler">
 	<div class="theory_Euler_div">
       <h1>Поиск Эйлерова цикла (или цепи) в Эйлеровом графе</h1>
@@ -119,14 +158,11 @@
         <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
         <input type="number" id="inputCount" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
       </div>      
-      <div id="graphs_div" style="display: flex;">
-      <form id="myForm">
-            <div id="inputContainer2" style="margin-left: 20px; margin-bottom: 10px;">
-            </div>
-      </form>
-      <div id="vis_graph"></div>
+      <div style="display: flex;">
+            <div id="inputContainer2" style="margin-left: 20px; margin-bottom: auto; margin-top: auto;"></div>
+            <div id="graph_div"></div>
       </div>
       <button onclick="addInputs()" margin="20px" class="anim_button">Добавить поля</button>
-      <button margin="20px" class="anim_button">Решить</button>
+      <button onclick="addGraph()"margin="20px" class="anim_button">Решить</button>
 	</div>    
 </body>
