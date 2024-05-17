@@ -1,4 +1,4 @@
-function addInputs() {
+function addInputs2() {
     let numberOfInputs = parseInt(document.getElementById('inputCount').value);
     if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 15) {
         alert('Введите корректное число от 1 до 15. В противном случае что-то может пойти не так!');
