@@ -3,14 +3,15 @@
 }
 
 .theory_Euler_div {
-    width: 90%;
+    width: 80%;
     margin: 15vh auto;
     background-color: #FFFF;
     border-radius: 20px;
-    padding: 20px;
+    padding: 60px;
     margin-bottom: 0px;
     padding: 40px;
     font-size: 17px;
+    margin-top: 60px;
 }
 
 .theory_Euler_div:nth-child(2){
@@ -33,7 +34,7 @@
     padding: 20px;
 }
 
-.theory_and_img {
+.theory_and_img_2 {
     display: flex;
 }
 
@@ -41,13 +42,13 @@
     display: flex;
     text-align: center;
     margin: 15px;
-    margin-right: 60px;
 }
 
-    .theory_and_img_el div {
+    .theory_and_img_2 {
         min-width: 120px;
         margin: 10px;
         font-size: 12px;
+        margin-right: 50px
     }
 
 .theory_Euler_div h1 {
@@ -69,7 +70,6 @@
     border-color: transparent;
     color: #464646;
     transition: background-position 0.5s;
-    text-align: center;
 }
 
 .anim_button:hover {
