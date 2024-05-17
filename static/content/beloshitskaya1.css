@@ -74,12 +74,14 @@
         text-decoration: none;
         font-weight: bold;
         text-align: left;
+        color:#666;
     }
 
 .icon {
-    margin-right: 5px;
-    width:30px;
-    height:30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
 }
 
 .support {
@@ -95,17 +97,28 @@
 }
 
 .theory_subgraph_div {
-    width: 90%;
+    width: 80%;
     margin: 15vh auto;
     background-color: #FFFF;
     border-radius: 20px;
-    padding: 20px;
+    padding: 60px;
+    margin-top: 60px;
     margin-bottom: 0px;
     padding: 40px;
     font-size: 17px;
 }
+    .theory_subgraph_div h3{
+        margin:20px;
+    }
 
-.theorema {
+.definition_sub {
+    border-radius: 10px;
+    background-color: #d7f6fc;
+    margin: 20px;
+    padding: 20px;
+}
+
+.theorema_sub {
     border-radius: 10px;
     border-color: #b1d9e1;
     padding: 10px;
@@ -114,33 +127,50 @@
     margin: 15px;
 }
 
-.definition {
-    border-radius: 10px;
-    background-color: #d7f6fc;
-    margin: 20px;
-    padding: 20px;
+.theory_sub {
+    margin: 20px 0 20px 20px;
+    margin-bottom:40px;
 }
-.theory {
-    margin-bottom: 20px;
-}
+    .theory_sub ul{
+        display:flex;
+    }
+    .theory_sub li {
+        margin-right:40px;
+    }
 
-.theory_and_img{
+.img_theory_sub{
     display: flex;
+    justify-content: center;
+    align-content:inherit;
+}
+    .img_theory_sub p {
+        margin: 20px;
+        margin-top:30px;
+    }
+
+.img_theory_sub1 {
+    justify-content: center;
+    align-content: inherit;
+}
+    .img_theory_sub1 p {
+        margin: 20px;
+        margin-top: 30px;
+    }
+
+.img_theory_sub_img {
     text-align: center;
-    margin: 15px;
-    margin-right: 60px;
-    justify-content:center;
-    align-content:center;
+    justify-content: center;
+    align-content: center;
 }
 
-    .theory_and_img div {
-        min-width: 120px;
+    .img_theory_sub_img div {
+        min-width: 100px;
         margin: 10px;
         font-size: 15px;
         color: #666;
     }
-    .theory_and_img p{
-        margin-top:10px;
+    .img_theory_sub_img p {
+        margin-top: 10px;
     }
 
 .theory_subgraph_div h1 {
