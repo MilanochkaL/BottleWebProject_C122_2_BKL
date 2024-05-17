@@ -16,7 +16,7 @@
             </div>
             <div class="contact-info">
                 <p><img src="/static/images/phone.png" alt="Phone Icon" class="icon">+7 (888) 777-66-55</p>
-                <a href="sasssha@gmail.com"><img src="/static/images/email.png" alt="Email Icon" class="icon"></i>sasssha@gmail.com</a>
+                <a href="mailto:sasssha@gmail.com"><img src="/static/images/email.png" alt="Email Icon" class="icon"></i>sasssha@gmail.com</a>
             </div>
         </div>
 
@@ -43,8 +43,8 @@
                 <p><strong>Допонительно:</strong> Мы не умерли</p>
             </div>
             <div class="contact-info">
-                <p><img src="/static/images/phone.png" alt="Phone Icon" class="icon">+7 (888) 777-66-55</p>
-                <a href="milllanaaaa@gmail.com"><img src="/static/images/email.png" alt="Email Icon" class="icon"></i>milllanaaaa@gmail.com</a>
+                <p><img src="/static/images/phone.png" alt="Phone Icon" class="icon" ><a href="tel:88887776655"></a>+7 (888) 777-66-55</p>
+                <a href="mailto:milllanaaaa@gmail.com"><img src="/static/images/email.png" alt="Email Icon" class="icon"></i>milllanaaaa@gmail.com</a>
             </div>
         </div>
     </div>
