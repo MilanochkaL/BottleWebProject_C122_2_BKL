@@ -1,0 +1,148 @@
+
+/*Страница контакты*/
+.authors-heading {
+    margin-top: 70px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.profiles {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-card {
+    width: 1000px;
+    min-height: 250px;
+    background-color: #d7f6fc;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+    .profile-card:nth-child(2) {
+        background-color: #c5cdfb;
+    }
+
+    .profile-card:nth-child(3) {
+        background-color: #d7f6fc;
+    }
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+
+.profile-info {
+    margin-left: 80px;
+    width: 500px;
+    text-align: left;
+    font-size: 17px;
+    border-right: 3px #32a1ce groove;
+}
+
+    .profile-info h2 {
+        margin-left: 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .profile-info p {
+        margin: 5px 0;
+        text-align: left;
+    }
+
+.contact-info {
+    margin-top: 20px;
+}
+
+    .contact-info p,
+    .contact-info a {
+        margin: 5px 0;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: left;
+    }
+
+.icon {
+    margin-right: 5px;
+    width:30px;
+    height:30px;
+}
+
+.support {
+    color: #888;
+    text-align: center;
+    width: 100%;
+}
+
+/*Страница поиска подграфов*/
+
+.background_subgraph {
+    background-color: #b1d9e1;
+}
+
+.theory_subgraph_div {
+    width: 90%;
+    margin: 15vh auto;
+    background-color: #FFFF;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 0px;
+    padding: 40px;
+    font-size: 17px;
+}
+
+.theorema {
+    border-radius: 10px;
+    border-color: #b1d9e1;
+    padding: 10px;
+    border-width: 2px;
+    border-style: solid;
+    margin: 15px;
+}
+
+.definition {
+    border-radius: 10px;
+    background-color: #d7f6fc;
+    margin: 20px;
+    padding: 20px;
+}
+.theory {
+    margin-bottom: 20px;
+}
+
+.theory_and_img{
+    display: flex;
+    text-align: center;
+    margin: 15px;
+    margin-right: 60px;
+    justify-content:center;
+    align-content:center;
+}
+
+    .theory_and_img div {
+        min-width: 120px;
+        margin: 10px;
+        font-size: 15px;
+        color: #666;
+    }
+    .theory_and_img p{
+        margin-top:10px;
+    }
+
+.theory_subgraph_div h1 {
+    font-family: 'Kreadon', sans-serif;
+}
