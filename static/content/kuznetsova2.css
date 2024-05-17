@@ -104,7 +104,7 @@
     margin-bottom: 10px;
 }
 
-.anim_button {
+.anim_button_1 {
     background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
     background-size: 200% auto;
     background-position: left top;
@@ -116,7 +116,7 @@
     margin: 10px;
 }
 
-    .anim_button:hover {
+    .anim_button_1:hover {
         background-position: right bottom;
         color: #000;
     }
