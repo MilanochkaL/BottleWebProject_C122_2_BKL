@@ -33,7 +33,7 @@
     padding: 20px;
 }
 
-.theory_and_img {
+.theory_and_img_2 {
     display: flex;
 }
 
@@ -41,13 +41,13 @@
     display: flex;
     text-align: center;
     margin: 15px;
-    margin-right: 60px;
 }
 
-    .theory_and_img_el div {
+    .theory_and_img_2 {
         min-width: 120px;
         margin: 10px;
         font-size: 12px;
+        margin-right: 50px
     }
 
 .theory_Euler_div h1 {
