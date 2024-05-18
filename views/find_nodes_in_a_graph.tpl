@@ -89,14 +89,15 @@
                   <input class="input" type="text" name="input">
             </div>
 
-        <div style="display: flex;">
+        <div class="flex">
             <h3 class = "text">Размерность матрицы:</h3> 
             <input type="number" id="inputCount" name="matrix-size" min="1" class="input2" required>
         </div>  
-        <div style="display: flex;">
-            <div id="inputContainer" style="margin-left: 20px; margin-bottom: auto; margin-top: auto;"></div>
+        <div class="flex">
+            <div id="inputContainer" class="container"></div>
+            <div id="graph_div1"></div>
         </div>
-        <div id="graph_div1"></div>
+        
         <div>
             <button class="anim_button_1" onclick="addInputs()">Добавить поля</button>
             <button class="anim_button_1" onclick="generateMatrix('inputCount')" margin="20px">Сгенерировать</button>

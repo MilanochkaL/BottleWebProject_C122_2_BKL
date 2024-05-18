@@ -137,3 +137,13 @@
     width: 400px;
     height: 400px;
 }
+
+.flex {
+    display: flex;
+}
+
+.container {
+    margin-left: 20px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
