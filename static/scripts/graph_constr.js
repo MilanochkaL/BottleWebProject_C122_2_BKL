@@ -15,7 +15,7 @@ function addGraph() {
 
     // Create nodes
     for (let i = 0; i < matrixRows.length; i++) {
-        nodes.push({ id: i + 1, label: `Node ${i + 1}` });
+        nodes.push({ id: i + 1, label: `${i + 1}` });
     }
 
     // Create edges
