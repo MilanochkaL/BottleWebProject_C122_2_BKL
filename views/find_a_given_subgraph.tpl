@@ -11,10 +11,12 @@
       </div>
 
       <div class="img_theory_sub">
+      <div>
           <p>Справа показан граф. Части исходного графа, которые не являются частью подграфа, показаны серым цветом и пунктирными линиями, хотя обычно их просто опускают:</p>
+          </div>
               <div class="img_theory_sub_img"> 
                   <div>
-                      <img src="static\images\subgraphs1.png" width="750px" height="150px" >
+                      <img src="static\images\subgraphs1.png" class="img_style_sub" >
                       <p>Обратите внимание, что если ребро входит в подграф, то обе его конечные точки должны входить в него. Не имеет смысла иметь ребро без конечной точки.</p>
                   </div>
               </div>
@@ -48,7 +50,7 @@
             Большой граф будем называть дата-графом, малый - паттерном.</p>
               <div class="img_theory_sub_img">
                   <div>
-                      <img src="static\images\subgraphs3.png" width="750px" height="370px" >
+                      <img src="static\images\subgraphs3.png" class="img_style_sub" >
                       <p>На рисунке ниже изображён паттерн ABC, справа - дата-граф 0123456. В дата-графе паттерну изоморфны три подграфа.</p>
                   </div>
               </div>
