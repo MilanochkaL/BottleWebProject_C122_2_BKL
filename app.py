@@ -26,7 +26,7 @@ if __name__ == '__main__':
     try:
         PORT = int(os.environ.get('SERVER_PORT', '5555'))
     except ValueError:
-        PORT = 5555
+        PORT = 8080
 
     @bottle.route('/static/<filepath:path>')
     def server_static(filepath):

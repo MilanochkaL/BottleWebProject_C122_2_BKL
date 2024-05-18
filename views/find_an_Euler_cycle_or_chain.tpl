@@ -1,112 +1,5 @@
 % rebase('layout.tpl', title='Эйлеров цикла', year=year)
 
-<script>
-
-function addGraph() {
-    let container = document.getElementById('graph_div');
-    while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild);
-    }
-    let div = document.createElement('div');
-    div.id = "mynetwork";
-    div.className = "mynetwork";
-    container.appendChild(div);
-
-    let inputContainer = document.getElementById('inputContainer2');
-    let matrixRows = inputContainer.children;
-    let nodes = [];
-    let edges = [];
-
-    // Создание вершин
-    for (let i = 0; i < matrixRows.length; i++) {
-        nodes.push({ id: i + 1, label: `${i + 1}` }); // Добавляем узел с id и меткой (номер узла)
-    }
-
-    // Создание ребер
-    for (let i = 0; i < matrixRows.length; i++) {
-        let rowInputs = matrixRows[i].children; // Получаем дочерние элементы текущей строки матрицы
-        for (let j = 0; j < rowInputs.length; j++) {
-            let inputValue = rowInputs[j].value; // Получаем значение текущего input
-            if (inputValue === '1' && i !== j) { // Если значение равно '1' и это не диагональный элемент
-                // Проверяем, что такого ребра еще нет в массиве edges
-                if (!edges.some(edge => (edge.from === i + 1 && edge.to === j / 2 + 1) || (edge.from === j / 2 + 1 && edge.to === i + 1))) {
-                    edges.push({ from: i + 1, to: j / 2 + 1 }); // Добавляем ребро в массив edges
-                }
-            }
-        }
-    }
-
-    var options = {};
-
-    var networkContainer = document.getElementById('mynetwork');
-    var data = {
-        nodes: nodes,
-        edges: edges
-    };
-    var network = new vis.Network(networkContainer, data, options);
-}
-function readFile() {
-const fileInput = document.createElement('input');
-fileInput.type = 'file';
-fileInput.accept = '.txt';
-
-fileInput.addEventListener('change', function() {
-    const file = this.files[0];
-    const reader = new FileReader();
-    
-    reader.onload = function(event) {
-        const content = event.target.result;
-        const rows = content.trim().split('\n');
-        
-        // Получаем размер матрицы по длине первой строки файла
-        const size = rows[0].trim().replace(/\s/g, '').length;
-        
-        const matrix = [];
-        let error = false;
-        
-        rows.forEach((row, i) => {
-            if (i >= size) return;
-            
-            const elements = row.trim().replace(/\s/g, '').split('');
-            
-            if (elements.length !== size) {
-                error = true;
-            }
-            
-            const sanitizedRow = elements.map(el => el === '1' ? 1 : el === '0' ? 0 : null);
-            
-            if (sanitizedRow.includes(null)) {
-                error = true;
-            }
-            
-            matrix.push(sanitizedRow);
-        });
-
-        if (error || matrix.length !== size) {
-            alert('Ошибка: Матрица должна быть квадратной и содержать только 0 и 1!');
-            return;
-        }
-
-        const sizeInput = document.getElementById('inputCount');
-        sizeInput.value = size;     
-        addInputs();
-        matrix.forEach((row, i) => {
-        row.forEach((value, j) => {
-            var input = document.getElementById(`dynamicInput${i}${j}`);
-            input.value = value;
-            var input = document.getElementById(`dynamicInput${j}${i}`);
-            input.value = value;
-        });
-    });
-    };
-    
-    reader.readAsText(file);
-});
-fileInput.click();
-}
-
-
-</script>
 
 <body class="backgroun_find_an_Euler">
 	<div class="theory_Euler_div">
@@ -235,6 +128,6 @@ fileInput.click();
       <button onclick="addInputs()" margin="20px" class="anim_button">Добавить поля</button>
       <button onclick="readFile()"margin="20px" class="anim_button">Загрузить из файла</button>
       <button class="anim_button" style="display: none;" id="generateButton" onclick="generateMatrix('inputCount')" margin="20px">Сгенерировать</button>
-      <button onclick="addGraph()" id="solveButton" margin="20px" class="anim_button" style="display: none;">Решить</button>      
+      <button onclick="addGraph_3()" id="solveButton" margin="20px" class="anim_button" style="display: none;">Решить</button>      
 	</div>    
 </body>
