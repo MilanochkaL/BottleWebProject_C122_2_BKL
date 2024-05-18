@@ -4,8 +4,8 @@ function addGraph1() {
         container.removeChild(container.lastChild);
     }
     let div = document.createElement('div');
-    div.id = "mynetwork";
-    div.className = "mynetwork";
+    div.id = "mynetwork_1";
+    div.className = "mynetwork_1";
     container.appendChild(div);
 
     let inputContainer = document.getElementById('inputContainer');
@@ -21,10 +21,13 @@ function addGraph1() {
     // Create edges
     for (let i = 0; i < matrixRows.length; i++) {
         let rowInputs = matrixRows[i].children;
-        for (let j = i; j < rowInputs.length; j += 2) {
+        for (let j = 0; j < rowInputs.length; j++) {
             let inputValue = rowInputs[j].value;
-            if (inputValue === '1') {
-                edges.push({ from: i + 1, to: j / 2 + 1 });
+            if (inputValue === '1' && i !== j) {
+                // ѕровер€ем, что такого ребра еще нет в массиве edges
+                if (!edges.some(edge => (edge.from === i + 1 && edge.to === j / 2 + 1) || (edge.from === j / 2 + 1 && edge.to === i + 1))) {
+                    edges.push({ from: i + 1, to: j / 2 + 1 });
+                }
             }
         }
     }
@@ -33,7 +36,7 @@ function addGraph1() {
     var options = {};
 
     // Create network data and display the graph
-    var networkContainer = document.getElementById('mynetwork');
+    var networkContainer = document.getElementById('mynetwork_1');
     var data = {
         nodes: nodes,
         edges: edges

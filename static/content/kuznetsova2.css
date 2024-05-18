@@ -127,3 +127,13 @@
     background-position: right bottom;
     color: #000;
 }
+
+.mynetwork_1 {
+    border-radius: 10px;
+    border-color: #a8b1e5;
+    border-width: 2px;
+    border-style: solid;
+    margin: 15px;
+    width: 400px;
+    height: 400px;
+}

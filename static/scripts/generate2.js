@@ -17,14 +17,26 @@ function addInputs() {
 
         let div = document.createElement('div');
         div.id = divName;
-        div.style = "display: flex"
+        div.style = "display: flex";
         container.appendChild(div); // Добавляем новое поле в контейнер
 
         let container2 = document.getElementById(divName); // Это место для новых полей
         for (let i = 0; i < numberOfInputs; i++) {
             let input = document.createElement('input');
-            input.style = "width: 30px; margin: 3px; border-radius: 10px; border-color: #a8b1e5; border-width: 2px; border-style: solid;";
-            input.name = `dynamicInput${i}`; // Имена для каждого поля для избежания ошибок
+            if (i === j) {
+                input.value = "0";
+                input.setAttribute('readonly', '');
+                input.style = "width: 30px; margin: 3px; border-radius: 10px; border-color: #a8b1e5; border-width: 2px; border-style: solid;";
+            } else {
+                input.value = "0";
+                input.style = "width: 30px; margin: 3px; border-radius: 10px; border-color: #a8b1e5; border-width: 2px; border-style: solid;";
+                input.oninput = function () {
+                    let input2 = document.getElementById(`dynamicInput${i}${j}`); // Это место для новых полей
+                    input2.value = input.value;
+                };
+            }
+            input.name = `dynamicInput${j}${i}`; // Имена для каждого поля для избежания ошибок
+            input.id = `dynamicInput${j}${i}`; // Имена для каждого поля для избежания ошибок
             input.value = "0";
             container2.appendChild(input); // Добавляем новое поле в контейнер
             container2.appendChild(document.createElement('br')); // Предусматриваем дополнительное пространство между полями
