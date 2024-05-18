@@ -5,7 +5,9 @@ function addInputs() {
         return;
     }
     const solveButton = document.getElementById('solveButton');
-        solveButton.style.display = 'inline-block';
+    solveButton.style.display = 'inline-block';
+    const generateButton = document.getElementById('generateButton');
+    generateButton.style.display = 'inline-block';
     let container = document.getElementById('inputContainer2'); // Это место для новых полей
     while (container.hasChildNodes()) {
         container.removeChild(container.lastChild); // Освобождаем место от старых элементов

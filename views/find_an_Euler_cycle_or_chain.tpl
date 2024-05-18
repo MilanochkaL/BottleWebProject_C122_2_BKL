@@ -17,26 +17,27 @@ function addGraph() {
     let nodes = [];
     let edges = [];
 
-    // Create nodes
+    // Создание вершин
     for (let i = 0; i < matrixRows.length; i++) {
-        nodes.push({ id: i + 1, label: `Node ${i + 1}` });
+        nodes.push({ id: i + 1, label: `${i + 1}` }); // Добавляем узел с id и меткой (номер узла)
     }
 
-    // Create edges
+    // Создание ребер
     for (let i = 0; i < matrixRows.length; i++) {
-        let rowInputs = matrixRows[i].children;
-        for (let j = i; j < rowInputs.length; j += 2) {
-            let inputValue = rowInputs[j].value;
-            if (inputValue === '1') {
-                edges.push({ from: i + 1, to: j / 2 + 1 });
+        let rowInputs = matrixRows[i].children; // Получаем дочерние элементы текущей строки матрицы
+        for (let j = 0; j < rowInputs.length; j++) {
+            let inputValue = rowInputs[j].value; // Получаем значение текущего input
+            if (inputValue === '1' && i !== j) { // Если значение равно '1' и это не диагональный элемент
+                // Проверяем, что такого ребра еще нет в массиве edges
+                if (!edges.some(edge => (edge.from === i + 1 && edge.to === j / 2 + 1) || (edge.from === j / 2 + 1 && edge.to === i + 1))) {
+                    edges.push({ from: i + 1, to: j / 2 + 1 }); // Добавляем ребро в массив edges
+                }
             }
         }
     }
 
-    // Network options
     var options = {};
 
-    // Create network data and display the graph
     var networkContainer = document.getElementById('mynetwork');
     var data = {
         nodes: nodes,
@@ -233,6 +234,7 @@ fileInput.click();
       <div id="matrix-container"></div>
       <button onclick="addInputs()" margin="20px" class="anim_button">Добавить поля</button>
       <button onclick="readFile()"margin="20px" class="anim_button">Загрузить из файла</button>
+      <button class="anim_button" style="display: none;" id="generateButton" onclick="generateMatrix('inputCount')" margin="20px">Сгенерировать</button>
       <button onclick="addGraph()" id="solveButton" margin="20px" class="anim_button" style="display: none;">Решить</button>      
 	</div>    
 </body>
