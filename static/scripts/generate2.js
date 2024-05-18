@@ -5,7 +5,7 @@ function addInputs() {
         return;
     }
 
-    let container = document.getElementById('inputContainer2'); // Это место для новых полей
+    let container = document.getElementById('inputContainer'); // Это место для новых полей
     while (container.hasChildNodes()) {
         container.removeChild(container.lastChild); // Освобождаем место от старых элементов
     }

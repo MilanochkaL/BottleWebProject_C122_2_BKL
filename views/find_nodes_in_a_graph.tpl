@@ -94,14 +94,15 @@
             <input type="number" id="inputCount" name="matrix-size" min="1" class="input2" required>
         </div>  
         <div style="display: flex;">
-            <div id="inputContainer2" style="margin-left: 20px; margin-bottom: auto; margin-top: auto;"></div>
-            <div id="graph_div"></div>
+            <div id="inputContainer" style="margin-left: 20px; margin-bottom: auto; margin-top: auto;"></div>
+            
         </div>
+        <div id="graph_div1"></div>
         <div>
             <button class ="anim_button_1" onclick="addInputs()">Добавить поля</button>
-            <button class="anim_button_1" onclick="addGraph()">Решить</p>
+            <button class="anim_button_1" onclick="addGraph1()">Решить</p>
         </div>
-
+        
     </div>
 
 </body>

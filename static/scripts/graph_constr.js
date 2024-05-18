@@ -1,5 +1,5 @@
-function addGraph() {
-    let container = document.getElementById('graph_div');
+function addGraph1() {
+    let container = document.getElementById('graph_div1');
     while (container.hasChildNodes()) {
         container.removeChild(container.lastChild);
     }
@@ -8,7 +8,7 @@ function addGraph() {
     div.className = "mynetwork";
     container.appendChild(div);
 
-    let inputContainer = document.getElementById('inputContainer2');
+    let inputContainer = document.getElementById('inputContainer');
     let matrixRows = inputContainer.children;
     let nodes = [];
     let edges = [];
