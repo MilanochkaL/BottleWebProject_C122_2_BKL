@@ -55,6 +55,8 @@
     <script src="/static/scripts/generate.js"></script>
     
     <script src="/static/scripts/generate2.js"></script>
+    <script src="/static/scripts/graph_constr.js"></script>
+    
 
 </body>
 </html>
