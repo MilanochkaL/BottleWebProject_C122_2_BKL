@@ -76,6 +76,9 @@
     <Content Include="static\scripts\generate2.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="static\scripts\generate_matrix.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="static\scripts\graph_constr.js">
       <SubType>Code</SubType>
     </Content>

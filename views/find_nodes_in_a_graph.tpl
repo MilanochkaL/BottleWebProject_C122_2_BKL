@@ -95,12 +95,13 @@
         </div>  
         <div style="display: flex;">
             <div id="inputContainer" style="margin-left: 20px; margin-bottom: auto; margin-top: auto;"></div>
-            
         </div>
         <div id="graph_div1"></div>
         <div>
-            <button class ="anim_button_1" onclick="addInputs()">Добавить поля</button>
-            <button class="anim_button_1" onclick="addGraph1()">Решить</p>
+            <button class="anim_button_1" onclick="addInputs()">Добавить поля</button>
+            <button class="anim_button_1" onclick="generateMatrix('inputCount')" margin="20px">Сгенерировать</button>
+            <button class="anim_button_1" onclick="addGraph1()">Решить</button>
+
         </div>
         
     </div>

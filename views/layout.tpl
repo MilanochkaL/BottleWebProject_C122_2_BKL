@@ -56,6 +56,9 @@
     
     <script src="/static/scripts/generate2.js"></script>
     <script src="/static/scripts/graph_constr.js"></script>
+    <script src="/static/scripts/generate_matrix.js"></script>
+
+    
 
     <script type="text/javascript" src="https://unpkg.com/vis-network/dist/vis-network.min.js"></script>
     
