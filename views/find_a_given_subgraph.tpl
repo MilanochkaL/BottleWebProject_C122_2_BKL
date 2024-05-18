@@ -48,7 +48,7 @@
             Большой граф будем называть дата-графом, малый - паттерном.</p>
               <div class="img_theory_sub_img">
                   <div>
-                      <img src="static\images\subgraphs3.png" width="900px" height="370px" >
+                      <img src="static\images\subgraphs3.png" width="750px" height="370px" >
                       <p>На рисунке ниже изображён паттерн ABC, справа - дата-граф 0123456. В дата-графе паттерну изоморфны три подграфа.</p>
                   </div>
               </div>
@@ -82,24 +82,49 @@
       
 	</div>    
 
-<div class="theory_subgraph_div">
+    <div class="graphs_sub">
+<div class="graphs_div_sub" >
 
   <p><a name="calc"></a></p>
   <div style="display: flex;">
-  <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
-  <input type="number" id="inputCount" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
+      <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
+      <input type="number" id="inputCount1" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
   </div>      
-  <div id="graphs_div" style="display: flex;">
-  <form id="myForm">
-      <div id="inputContainer2" style="margin-left: 20px; margin-bottom: 10px;">
-      </div>
-  </form>
-  <div id="vis_graph"></div>
+      <div id="graphs_div" style="display: flex;">
+      <form id="myForm">
+          <div id="inputContainer_first" style="margin-left: 20px; margin-bottom: 10px;"></div>
+      </form>
+      <div id="vis_graph"></div>
   </div>
-  <button onclick="addInputs()" margin="20px" class="anim_button">Добавить поля</button>
-  <button onclick="createGraph()" margin="20px" class="anim_button">Создать граф</button>
-  <button margin="20px"  class="anim_button">Решить</button>
-  <div id="mynetwork"></div>
+  <button onclick="addInputs1('inputContainer_first', 'inputCount1')" margin-left="40px" margin="20px"  class="anim_button">Добавить поля</button>
+  <button onclick="createGraph1('inputContainer_first', 'mygraph1')" margin="20px" class="anim_button">Создать граф</button>
+  <button margin="20px" class="anim_button">Решить</button>
 
+    <div id="mygraph1" class="mygraph" ></div>
+
+  
+</div>
+
+<div class="graphs_div_sub" >
+
+      <p><a name="calc"></a></p>
+      <div style="display: flex;">
+          <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
+          <input type="number" id="inputCount2" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
+      </div>      
+          <div id="graphs_div" style="display: flex;">
+          <form id="myForm">
+              <div id="inputContainer_second" style="margin-left: 20px; margin-bottom: 10px;"></div>
+          </form>
+          <div id="vis_graph"></div>
+      </div>
+      <button onclick="addInputs1('inputContainer_second', 'inputCount2')" margin-left="40px" margin="20px"  class="anim_button">Добавить поля</button>
+      <button onclick="createGraph1('inputContainer_second', 'mygraph2')" margin="20px" class="anim_button">Создать граф</button>
+      <button margin="20px" class="anim_button">Решить</button>
+
+        <div id="mygraph2" class="mygraph"></div>
+
+</div>
+</div>
 
 </body>

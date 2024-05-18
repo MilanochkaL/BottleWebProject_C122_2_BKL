@@ -54,7 +54,7 @@
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>
     <script src="/static/scripts/generate.js"></script>
-    
+    <script src="/static/scripts/generate1.js"></script>
     <script src="/static/scripts/generate2.js"></script>
 
 </body>
