@@ -19,6 +19,8 @@
     <Name>BottleWebProject_C122_2_BKL</Name>
     <RootNamespace>BottleWebProject_C122_2_BKL</RootNamespace>
     <InterpreterId>MSBuild|Python9_1|$(MSBuildProjectFullPath)</InterpreterId>
+    <WebBrowserPort>
+    </WebBrowserPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
