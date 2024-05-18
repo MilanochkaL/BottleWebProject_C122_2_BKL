@@ -25,8 +25,10 @@ function addInputs() {
             let input = document.createElement('input');
             input.style = "width: 30px; margin: 3px; border-radius: 10px; border-color: #a8b1e5; border-width: 2px; border-style: solid;";
             input.name = `dynamicInput${i}`; // Имена для каждого поля для избежания ошибок
+            input.value = "0";
             container2.appendChild(input); // Добавляем новое поле в контейнер
             container2.appendChild(document.createElement('br')); // Предусматриваем дополнительное пространство между полями
         }
     }
+
 }
