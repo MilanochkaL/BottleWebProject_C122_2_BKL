@@ -232,7 +232,7 @@ fileInput.click();
       </div>
       <div id="matrix-container"></div>
       <button onclick="addInputs()" margin="20px" class="anim_button">Добавить поля</button>
-      <button onclick="addGraph()"margin="20px" class="anim_button">Решить</button>
       <button onclick="readFile()"margin="20px" class="anim_button">Загрузить из файла</button>
+      <button onclick="addGraph()" id="solveButton" margin="20px" class="anim_button" style="display: none;">Решить</button>      
 	</div>    
 </body>

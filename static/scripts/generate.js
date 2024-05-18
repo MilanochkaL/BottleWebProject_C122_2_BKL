@@ -4,7 +4,8 @@ function addInputs() {
         alert('Введите корректное число от 1 до 15. В противном случае что-то может пойти не так!');
         return;
     }
-
+    const solveButton = document.getElementById('solveButton');
+        solveButton.style.display = 'inline-block';
     let container = document.getElementById('inputContainer2'); // Это место для новых полей
     while (container.hasChildNodes()) {
         container.removeChild(container.lastChild); // Освобождаем место от старых элементов
