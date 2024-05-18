@@ -89,23 +89,19 @@
                   <input class="input" type="text" name="input">
             </div>
 
-        <div id="graphs_div" style="display: flex;">
+        <div style="display: flex;">
             <h3 class = "text">Размерность матрицы:</h3> 
             <input type="number" id="inputCount" name="matrix-size" min="1" class="input2" required>
-          </div>      
-          <form id="myForm">
-                <div id="inputContainer2" class="form">
-                </div>
-          </form>
-        <div id="vis_graph"></div>
+        </div>  
+        <div style="display: flex;">
+            <div id="inputContainer2" style="margin-left: 20px; margin-bottom: auto; margin-top: auto;"></div>
+            <div id="graph_div"></div>
+        </div>
         <div>
-            <button class ="anim_button_1" onclick="addInputs()" >Добавить поля</button>
+            <button class ="anim_button_1" onclick="addInputs()">Добавить поля</button>
             <button class="anim_button_1" onclick="addGraph()">Решить</p>
         </div>
-        
-        
+
     </div>
-            
-    
 
 </body>
