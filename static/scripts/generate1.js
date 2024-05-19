@@ -46,10 +46,10 @@ function addInputs1(inputContainer, count, color) {
     }
 }
 
-function generateMatrix(size) {
+function generateMatrix(size, inputContainer) {
     let numberOfInputs = parseInt(document.getElementById(size).value);
     let matrix = generateSymmetricMatrix(numberOfInputs);
-    fillMatrixInputs(matrix, 'dynamicInput');
+    fillMatrixInputs(matrix, 'dynamicInput', inputContainer);
 }
 
 function generateSymmetricMatrix(size) {
@@ -71,10 +71,10 @@ function generateSymmetricMatrix(size) {
     return matrix;
 }
 
-function fillMatrixInputs(matrix, inputPrefix) {
+function fillMatrixInputs(matrix, inputPrefix, inputContainer) {
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < matrix[i].length; j++) {
-            let input = document.getElementById(`${inputPrefix}${i}${j}`);
+            let input = document.getElementById(`${inputPrefix}${i}${j}${inputContainer}`);
             input.value = matrix[i][j];
         }
     }
