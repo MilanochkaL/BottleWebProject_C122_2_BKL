@@ -1,4 +1,4 @@
-function addInputs1(inputContainer, count) {
+function addInputs1(inputContainer, count, color) {
     let numberOfInputs = parseInt(document.getElementById(count).value);
     if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 15) {
         alert('Введите корректное число от 1 до 15. В противном случае что-то может пойти не так!');
@@ -27,16 +27,17 @@ function addInputs1(inputContainer, count) {
             if (i === j) {
                 input.value = "0";
                 input.setAttribute('readonly', '');
-                input.style = "width: 30px; margin: 3px; border-radius: 10px; border-color: #90b0b6; border-width: 2px; border-style: solid;";
+                input.style = "width: 30px; margin: 3px; border-radius: 10px; border-width: 2px; border-style: solid;";
+                input.style.borderColor = color;
             } else {
                 input.value = "0";
-                input.style = "width: 30px; margin: 3px; border-radius: 10px; border-color: #90b0b6; border-width: 2px; border-style: solid;";
+                input.style = "width: 30px; margin: 3px; border-radius: 10px; border-width: 2px; border-style: solid;";
+                input.style.borderColor = color;
                 input.oninput = function () {
                     let input2 = document.getElementById(`dynamicInput${i}${j}`); // Это место для новых полей
                     input2.value = input.value;
                 };
             }
-            input.style = "width: 30px; margin: 3px; border-radius: 10px; border-color: #90b0b6; border-width: 2px; border-style: solid;";
             input.name = `dynamicInput${i}`; // Имена для каждого поля для избежания ошибок
             input.id = `dynamicInput${j}${i}`;
             container2.appendChild(input); // Добавляем новое поле в контейнер

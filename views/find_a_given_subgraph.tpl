@@ -98,7 +98,7 @@
       </form>
       <div id="vis_graph"></div>
   </div>
-  <button onclick="addInputs1('inputContainer_first', 'inputCount1')" margin-left="40px" margin="20px"  class="anim_button">Добавить поля</button>
+  <button onclick="addInputs1('inputContainer_first', 'inputCount1', '#90b0b6')" margin-left="40px" margin="20px"  class="anim_button">Добавить поля</button>
   <button onclick="createGraph1('inputContainer_first', 'mygraph1')" margin="20px" class="anim_button">Создать граф</button>
   <button onclick="generateMatrix('inputCount1')" margin="20px" class="anim_button">Сгенерировать</button>
 
@@ -122,7 +122,7 @@
           </form>
           <div id="vis_graph"></div>
       </div>
-      <button onclick="addInputs1('inputContainer_second', 'inputCount2')" margin-left="40px" margin="20px"  class="anim_button">Добавить поля</button>
+      <button onclick="addInputs1('inputContainer_second', 'inputCount2', '#90b0b6')" margin-left="40px" margin="20px"  class="anim_button">Добавить поля</button>
       <button onclick="createGraph1('inputContainer_second', 'mygraph2')" margin="20px" class="anim_button">Создать граф</button>
       <button onclick="generateMatrix('inputCount2')" margin="20px" class="anim_button">Сгенерировать</button>
 

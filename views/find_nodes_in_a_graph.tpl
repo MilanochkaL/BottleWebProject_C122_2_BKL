@@ -97,7 +97,7 @@
                 <div id="inputContainer2" class="form">
                 </div>
           </form>
-          <button class ="anim_button_1" onclick="addInputs2()" >Добавить поля</button>
+          <button class ="anim_button_1"  onclick="addInputs1('inputContainer2', 'inputCount', '#a8b1e5')" >Добавить поля</button>
         
         <div >
             <p class="anim_button_1">Решить</p>
