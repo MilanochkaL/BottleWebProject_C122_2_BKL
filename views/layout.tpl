@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="static\images\icon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/static/content/kuznetsova2.css">
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
+    
     <script type="text/javascript" src="https://unpkg.com/vis-network/dist/vis-network.min.js"></script>
 </head>
 
