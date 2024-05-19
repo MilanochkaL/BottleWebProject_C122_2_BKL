@@ -37,7 +37,7 @@ function addInputs1(inputContainer, count, color) {
                 input.style = "width: 30px; margin: 3px; border-radius: 10px; border-width: 2px; border-style: solid;";
                 input.style.borderColor = color;
                 input.oninput = function () {
-                    let input2 = document.getElementById(`dynamicInput${i}${j}`); // Это место для новых полей
+                    let input2 = document.getElementById(`dynamicInput${i}${j}${inputContainer}`); // Это место для новых полей
                     input2.value = input.value;
                 };
             }
