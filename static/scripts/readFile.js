@@ -1,4 +1,4 @@
-function readFile() {
+function readFile(inputContainer, count, color) {
     const fileInput = document.createElement('input');
     fileInput.type = 'file';
     fileInput.accept = '.txt';
@@ -40,14 +40,14 @@ function readFile() {
                 return;
             }
 
-            const sizeInput = document.getElementById('inputCount');
+            const sizeInput = document.getElementById(count);
             sizeInput.value = size;
-            addInputs();
+            addInputs1(inputContainer, count, color);
             matrix.forEach((row, i) => {
                 row.forEach((value, j) => {
-                    var input = document.getElementById(`dynamicInput${i}${j}`);
+                    var input = document.getElementById(`dynamicInput${i}${j}${inputContainer}`);
                     input.value = value;
-                    var input = document.getElementById(`dynamicInput${j}${i}`);
+                    var input = document.getElementById(`dynamicInput${j}${i}${inputContainer}`);
                     input.value = value;
                 });
             });

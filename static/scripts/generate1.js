@@ -39,7 +39,7 @@ function addInputs1(inputContainer, count, color) {
                 };
             }
             input.name = `dynamicInput${i}`; // Имена для каждого поля для избежания ошибок
-            input.id = `dynamicInput${j}${i}`;
+            input.id = `dynamicInput${j}${i}${inputContainer}`;
             container2.appendChild(input); // Добавляем новое поле в контейнер
             container2.appendChild(document.createElement('br')); // Предусматриваем дополнительное пространство между полями
         }
