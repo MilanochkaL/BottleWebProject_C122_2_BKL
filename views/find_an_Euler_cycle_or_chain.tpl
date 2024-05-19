@@ -122,54 +122,14 @@
       <div style="display: flex;">
             <div id="inputContainer2" style="margin-left: 20px; margin-bottom: auto; margin-top: auto;"></div>
             <div id="graph_div"></div>
+            <div id="rez" style="margin: 20px; margin-bottom: auto; margin-top: auto;"></div>
       </div>
       <div id="matrix-container"></div>
       <button onclick="addInputs1('inputContainer2', 'inputCount', '#90b0b6')" margin="20px" class="anim_button">Добавить поля</button>
       <button onclick="readFile('inputContainer2', 'inputCount', '#90b0b6')"margin="20px" class="anim_button">Загрузить из файла</button>
       <button class="anim_button" style="display: none;" id="generateButton" onclick="generateMatrix('inputCount', 'inputContainer2')" margin="20px">Сгенерировать</button>
-      <button onclick="addGraph_3()" id="solveButton" margin="20px" class="anim_button" style="display: none;">Решить</button>      
-	  <button id="loadMatrixBtn">Load Matrix</button>
-      <div id="matrixContainer"></div>
+      <button onclick="addGraph_3()" id="solveButton" margin="20px" class="anim_button" style="display: none;">Решить</button>
+      
     </div>   
     
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('loadMatrixBtn').addEventListener('click', function() {
-        const sizeInput = document.getElementById('inputCount');
-        const size = parseInt(sizeInput.value);
-        let matrix = [];
-        
-        for (let i = 0; i < size; i++) {
-            matrix[i] = [];
-            for (let j = 0; j < size; j++) {    
-                const input = document.getElementById(`dynamicInput${i}${j}`);
-                matrix[i][j] = parseInt(input.value);
-            }
-        }
-        
-        fetch('/Euler_cycle', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ matrix: matrix }),
-        })
-        .then(response => {
-            if (response.ok) {
-                return response.text();
-            } else {
-                throw new Error('Ошибка обработки матрицы');
-            }
-        })
-        .then(data => {
-            document.getElementById('matrixContainer').innerText = data;
-        })
-        .catch(error => {
-            console.error(error);
-        });
-    });
-});
-
-
-</script>
 </body>

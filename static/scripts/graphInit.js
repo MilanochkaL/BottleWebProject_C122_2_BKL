@@ -1,4 +1,5 @@
 function addGraph_3() {
+    Euler_cycle_js();
     let container = document.getElementById('graph_div');
     while (container.hasChildNodes()) {
         container.removeChild(container.lastChild);

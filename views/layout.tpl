@@ -57,6 +57,7 @@
     <script src="/static/scripts/readFile.js"></script>
     <script src="/static/scripts/graphInit.js"></script>    
     <script src="/static/scripts/generate1.js"></script>
+    <script src="/static/scripts/Euler_cycle.js"></script>
 
 </body>
 </html>
