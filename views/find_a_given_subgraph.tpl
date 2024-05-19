@@ -84,10 +84,11 @@
       
 	</div>    
 
+      <p><a name="calc"></a></p>
     <div class="graphs_sub">
 <div class="graphs_div_sub" >
 
-  <p><a name="calc"></a></p>
+
   <div style="display: flex;">
       <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
       <input type="number" id="inputCount1" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
@@ -96,7 +97,6 @@
       <form id="myForm">
           <div id="inputContainer_first" style="margin-left: 20px; margin-bottom: 10px;"></div>
       </form>
-      <div id="vis_graph"></div>
   </div>
   <button onclick="addInputs1('inputContainer_first', 'inputCount1', '#90b0b6')" margin-left="40px" margin="20px"  class="anim_button">Добавить поля</button>
   <button onclick="createGraph1('inputContainer_first', 'mygraph1')" margin="20px" class="anim_button">Создать граф</button>
@@ -105,14 +105,13 @@
   <button margin="20px" class="anim_button" id="solveButton" style="display: none;">Решить</button>
   <button onclick="readFile('inputContainer_first', 'inputCount1', '#90b0b6')"margin="20px" class="anim_button">Загрузить из файла</button>
 
-    <div id="mygraph1" class="mygraph" ></div>
+    <div id="mygraph1"></div>
 
   
 </div>
 
 <div class="graphs_div_sub" >
 
-      <p><a name="calc"></a></p>
       <div style="display: flex;">
           <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
           <input type="number" id="inputCount2" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
@@ -121,7 +120,6 @@
           <form id="myForm">
               <div id="inputContainer_second" style="margin-left: 20px; margin-bottom: 10px;"></div>
           </form>
-          <div id="vis_graph"></div>
       </div>
       <button onclick="addInputs1('inputContainer_second', 'inputCount2', '#90b0b6')" margin-left="40px" margin="20px"  class="anim_button">Добавить поля</button>
       <button onclick="createGraph1('inputContainer_second', 'mygraph2')" margin="20px" class="anim_button">Создать граф</button>
@@ -130,7 +128,7 @@
 
       <button margin="20px" class="anim_button">Решить</button>
 
-        <div id="mygraph2" class="mygraph"></div>
+        <div id="mygraph2"></div>
 
 </div>
 </div>

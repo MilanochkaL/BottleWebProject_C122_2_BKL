@@ -83,29 +83,41 @@ function fillMatrixInputs(matrix, inputPrefix, inputContainer) {
     }
 }
 
-function createGraph1(inputContainer, graph) {
-    let container = document.getElementById(inputContainer);
-    let matrixRows = container.children;
+function createGraph1(inputCont, graph) {
+    let container = document.getElementById(graph);
+    while (container.hasChildNodes()) {
+        container.removeChild(container.lastChild);
+    }
+    let div = document.createElement('div');
+    div.id = `mynetwork${graph}`;
+    div.className = "mynetwork";
+    container.appendChild(div);
+
+    let inputContainer = document.getElementById(inputCont);
+    let matrixRows = inputContainer.children;
     let nodes = [];
     let edges = [];
 
-    // Создание узлов
+    // Создание вершин
     for (let i = 0; i < matrixRows.length; i++) {
-        nodes.push({ id: i + 1, label: `Node ${i + 1}` });
+        nodes.push({ id: i + 1, label: `${i + 1}` }); // Добавляем узел с id и меткой (номер узла)
     }
 
     // Создание ребер
     for (let i = 0; i < matrixRows.length; i++) {
-        let rowInputs = matrixRows[i].children;
-        for (let j = i; j < rowInputs.length; j += 2) {
-            let inputValue = rowInputs[j].value;
-            if (inputValue == '1') {
-                edges.push({ from: i + 1, to: j / 2 + 1 });
+        let rowInputs = matrixRows[i].children; // Получаем дочерние элементы текущей строки матрицы
+        for (let j = 0; j < rowInputs.length; j++) {
+            let inputValue = rowInputs[j].value; // Получаем значение текущего input
+            if (inputValue === '1' && i !== j) { // Если значение равно '1' и это не диагональный элемент
+                // Проверяем, что такого ребра еще нет в массиве edges
+                if (!edges.some(edge => (edge.from === i + 1 && edge.to === j / 2 + 1) || (edge.from === j / 2 + 1 && edge.to === i + 1))) {
+                    edges.push({ from: i + 1, to: j / 2 + 1 }); // Добавляем ребро в массив edges
+                }
             }
         }
     }
 
-    let networkContainer = document.getElementById(graph);
+    let networkContainer = document.getElementById(`mynetwork${graph}`);
     let data = {
         nodes: new vis.DataSet(nodes),
         edges: new vis.DataSet(edges)
