@@ -1,4 +1,3 @@
-
 def find_eulerian_path_or_cycle(adjacency_matrix):
     # Функция для проверки, является ли следующее ребро допустимым
     def is_valid_next_edge(u, v):
@@ -55,11 +54,21 @@ def find_eulerian_path_or_cycle(adjacency_matrix):
     odd_degree_nodes = [i for i in range(n) if sum(adjacency_matrix[i]) % 2 != 0]
 
     # Проверяем наличие эйлерова пути или цикла
-    if len(odd_degree_nodes) not in [0, 2]:
+    if len(odd_degree_nodes) not in [0, 2] or len(odd_degree_nodes) == n:
+        return "Граф не имеет эйлерова пути или цикла"
+
+    # Проверяем компоненты связности
+    component_count = 0
+    visited = [False] * n
+    for i in range(n):
+        if not visited[i]:
+            dfs_count(i, visited)
+            component_count += 1
+
+    if component_count > 1:
         return "Граф не имеет эйлерова пути или цикла"
 
     start_node = find_start_node()
     path = get_euler_util(start_node)
 
     return 'Эйлеров ' + ('цикл: ' if path[0] == path[-2] else 'путь: ') + path
-
