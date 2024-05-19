@@ -102,7 +102,7 @@
   <button onclick="createGraph1('inputContainer_first', 'mygraph1')" margin="20px" class="anim_button">Создать граф</button>
   <button onclick="generateMatrix('inputCount1', 'inputContainer_first')" margin="20px" class="anim_button">Сгенерировать</button>
 
-  <button margin="20px" class="anim_button">Решить</button>
+  <button margin="20px" class="anim_button" id="solveButton" style="display: none;">Решить</button>
   <button onclick="readFile('inputContainer_first', 'inputCount1', '#90b0b6')"margin="20px" class="anim_button">Загрузить из файла</button>
 
     <div id="mygraph1" class="mygraph" ></div>
