@@ -57,6 +57,7 @@
     <script src="/static/scripts/generate.js"></script>
     <script src="/static/scripts/readFile.js"></script>
     <script src="/static/scripts/graphInit.js"></script>    
+    <script src="/static/scripts/generate1.js"></script>
     <script src="/static/scripts/generate2.js"></script>
 
 </body>

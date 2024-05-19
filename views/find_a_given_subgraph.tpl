@@ -11,10 +11,12 @@
       </div>
 
       <div class="img_theory_sub">
+      <div>
           <p>Справа показан граф. Части исходного графа, которые не являются частью подграфа, показаны серым цветом и пунктирными линиями, хотя обычно их просто опускают:</p>
+          </div>
               <div class="img_theory_sub_img"> 
                   <div>
-                      <img src="static\images\subgraphs1.png" width="750px" height="150px" >
+                      <img src="static\images\subgraphs1.png" class="img_style_sub" >
                       <p>Обратите внимание, что если ребро входит в подграф, то обе его конечные точки должны входить в него. Не имеет смысла иметь ребро без конечной точки.</p>
                   </div>
               </div>
@@ -48,7 +50,7 @@
             Большой граф будем называть дата-графом, малый - паттерном.</p>
               <div class="img_theory_sub_img">
                   <div>
-                      <img src="static\images\subgraphs3.png" width="900px" height="370px" >
+                      <img src="static\images\subgraphs3.png" class="img_style_sub" >
                       <p>На рисунке ниже изображён паттерн ABC, справа - дата-граф 0123456. В дата-графе паттерну изоморфны три подграфа.</p>
                   </div>
               </div>
@@ -82,26 +84,53 @@
       
 	</div>    
 
-    <div class = "rectangle">
-            <p><a name="calc"></a></p>
-            <label class="size_text">Калькулятор:</label>
-                
-            <div class="text">
-                  <p>k = </p>
-                  <input class="input" type="text" name="input">
-            </div>
+    <div class="graphs_sub">
+<div class="graphs_div_sub" >
 
-        <div style="display: flex;">
-            <h3 class = "text">Размерность матрицы:</h3> 
-            <input type="number" id="inputCount" name="matrix-size" min="1" class="input2" required>
-          </div>      
+  <p><a name="calc"></a></p>
+  <div style="display: flex;">
+      <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
+      <input type="number" id="inputCount1" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
+  </div>      
+      <div id="graphs_div" style="display: flex;">
+      <form id="myForm">
+          <div id="inputContainer_first" style="margin-left: 20px; margin-bottom: 10px;"></div>
+      </form>
+      <div id="vis_graph"></div>
+  </div>
+  <button onclick="addInputs1('inputContainer_first', 'inputCount1')" margin-left="40px" margin="20px"  class="anim_button">Добавить поля</button>
+  <button onclick="createGraph1('inputContainer_first', 'mygraph1')" margin="20px" class="anim_button">Создать граф</button>
+  <button onclick="generateMatrix('inputCount1')" margin="20px" class="anim_button">Сгенерировать</button>
+
+  <button margin="20px" class="anim_button">Решить</button>
+
+    <div id="mygraph1" class="mygraph" ></div>
+
+  
+</div>
+
+<div class="graphs_div_sub" >
+
+      <p><a name="calc"></a></p>
+      <div style="display: flex;">
+          <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
+          <input type="number" id="inputCount2" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
+      </div>      
+          <div id="graphs_div" style="display: flex;">
           <form id="myForm">
-                <div id="inputContainer2" class="form">
-                </div>
+              <div id="inputContainer_second" style="margin-left: 20px; margin-bottom: 10px;"></div>
           </form>
-          <button class ="anim_button" onclick="addInputs()" >Добавить поля</button>
-        
-        <div class="anim_button">
-            <p >Решить</p>
-        </div>
+          <div id="vis_graph"></div>
+      </div>
+      <button onclick="addInputs1('inputContainer_second', 'inputCount2')" margin-left="40px" margin="20px"  class="anim_button">Добавить поля</button>
+      <button onclick="createGraph1('inputContainer_second', 'mygraph2')" margin="20px" class="anim_button">Создать граф</button>
+      <button onclick="generateMatrix('inputCount2')" margin="20px" class="anim_button">Сгенерировать</button>
+
+      <button margin="20px" class="anim_button">Решить</button>
+
+        <div id="mygraph2" class="mygraph"></div>
+
+</div>
+</div>
+
 </body>
