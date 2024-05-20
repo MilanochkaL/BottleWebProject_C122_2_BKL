@@ -22,7 +22,7 @@ function Euler_cycle_js() {
             if (response.ok) {
                 return response.text();
             } else {
-                throw new Error('ќшибка обработки матрицы');
+                throw new Error('ошибка обработки матрицы');
             }
         })
         .then(data => {

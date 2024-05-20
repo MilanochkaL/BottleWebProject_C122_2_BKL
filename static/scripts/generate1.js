@@ -1,3 +1,4 @@
+// Функция для добавления полей ввода в указанный контейнер
 function addInputs1(inputContainer, count, color) {
     let numberOfInputs = parseInt(document.getElementById(count).value);
     if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 15) {
@@ -51,12 +52,14 @@ function addInputs1(inputContainer, count, color) {
     }
 }
 
+
 function generateMatrix(size, inputContainer) {
     let numberOfInputs = parseInt(document.getElementById(size).value);
     let matrix = generateSymmetricMatrix(numberOfInputs);
     fillMatrixInputs(matrix, 'dynamicInput', inputContainer);
 }
 
+// Функция генерации симметричной матрицы заданного размера
 function generateSymmetricMatrix(size) {
     let matrix = [];
     for (let i = 0; i < size; i++) {
