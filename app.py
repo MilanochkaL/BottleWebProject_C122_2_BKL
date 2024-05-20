@@ -35,6 +35,7 @@ if __name__ == '__main__':
     @bottle.post('/Nodes_in_a_graph')
     def nodes_in_a_graph():
         adjacency_matrix = request.json.get('matrix')
+        k = request.json.get('k')
         return fm.find_max_neighborhood(adjacency_matrix,k)
 
     @bottle.route('/static/<filepath:path>')

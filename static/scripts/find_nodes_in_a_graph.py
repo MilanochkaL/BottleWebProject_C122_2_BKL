@@ -1,4 +1,5 @@
 def find_max_neighborhood(adjacency_matrix, k):
+
     #Ќаходит вершины с наибольшим окружением в первых k €русах.
     #¬ычисл€ет последовательно степени матрицы смежности и матрицы ограниченных достижимостей.
     def matrix_multiply(a, b):
@@ -44,4 +45,8 @@ def find_max_neighborhood(adjacency_matrix, k):
         elif neighborhood_size == max_neighborhood_size:
             max_neighborhood_vertices.append(i + 1)
 
-    return max_neighborhood_vertices, reachability_matrix
+    # ‘орматирование вывода матрицы
+    matrix_output = "\n".join([" ".join(map(str, row)) for row in reachability_matrix])
+    vertices_output = ", ".join(map(str, max_neighborhood_vertices))
+
+    return f"ћатрица ограниченных достижимостей k-го шага:\n"+{matrix_output}+"\n\nЌаибольшее окружение имеют вершины: "+{vertices_output}
