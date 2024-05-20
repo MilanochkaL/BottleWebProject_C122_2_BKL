@@ -10,8 +10,10 @@ function addInputs1(inputContainer, count, color) {
         container.removeChild(container.lastChild); // Освобождаем место от старых элементов
     }
 
-    const solveButton = document.getElementById('solveButton');
-    solveButton.style.display = 'inline-block';
+    if (inputContainer != 'inputContainer_first') {
+        const solveButton = document.getElementById('solveButton');
+        solveButton.style.display = 'inline-block';
+    }
 
     let divNames = [];
     for (let j = 0; j < numberOfInputs; j++) {
