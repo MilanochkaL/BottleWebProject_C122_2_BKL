@@ -84,8 +84,10 @@
       
 	</div>    
 
-      <p><a name="calc"></a></p>
-    <div class="graphs_sub">
+
+<p><a name="calc"></a></p>
+<div class="graphs_sub">
+
 <div class="graphs_div_sub" >
 
 
@@ -102,12 +104,10 @@
   <button onclick="createGraph1('inputContainer_first', 'mygraph1')" margin="20px" class="anim_button">Создать граф</button>
   <button onclick="generateMatrix('inputCount1', 'inputContainer_first')" margin="20px" class="anim_button">Сгенерировать</button>
 
-  
   <button onclick="readFile('inputContainer_first', 'inputCount1', '#90b0b6')"margin="20px" class="anim_button">Загрузить из файла</button>
 
     <div id="mygraph1"></div>
 
-  
 </div>
 
 <div class="graphs_div_sub" >
@@ -125,11 +125,16 @@
       <button onclick="createGraph1('inputContainer_second', 'mygraph2')" margin="20px" class="anim_button">Создать граф</button>
       <button onclick="generateMatrix('inputCount2', 'inputContainer_second')" margin="20px" class="anim_button">Сгенерировать</button>
       <button onclick="readFile('inputContainer_second', 'inputCount2', '#90b0b6')"margin="20px" class="anim_button">Загрузить из файла</button>
-      <button margin="20px" class="anim_button" id="solveButton" style="display: none;">Решить</button>
+      <button margin="20px" onclick="solve_isomorphic_subgraphs_js()" class="anim_button" id="solveButton" style="display: none;">Решить</button>
 
         <div id="mygraph2"></div>
 
 </div>
 </div>
+
+<div class="definition_sub">
+<div id="result_sub" style="width:60%; margin: 20px; "></div>
+</div>
+
 
 </body>

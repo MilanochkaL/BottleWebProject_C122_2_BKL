@@ -39,6 +39,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
+    <Compile Include="static\scripts\find_a_given_subgraph.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\" />
@@ -76,6 +79,7 @@
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\Euler_cycle.js" />
+    <Content Include="static\scripts\solve_isomorphic_subgraphs.js" />
     <Content Include="static\scripts\generate1.js" />
     <Content Include="static\scripts\generate2.js">
       <SubType>Code</SubType>

@@ -9,6 +9,7 @@ import os
 import sys
 import routes
 from static.scripts import find_an_Euler_cycle_or_chain as fe
+from static.scripts import find_a_given_subgraph as fs
 
 if '--debug' in sys.argv[1:] or 'SERVER_DEBUG' in os.environ:
     bottle.debug(True)
@@ -29,12 +30,19 @@ if __name__ == '__main__':
     def euler_cycle():
         adjacency_matrix = request.json.get('matrix')
         return fe.find_eulerian_path_or_cycle(adjacency_matrix)
+    
+    @bottle.post('/solve_isomorphic_subgraphs')
+    def subgraphs():
+        matrix1 = request.json.get('matrix1')
+        matrix2 = request.json.get('matrix2')
+
+        # Выполните поиск изоморфных подграфов и верните результат
+        return fs.find_subgraphs(matrix1, matrix2)
 
     @bottle.route('/static/<filepath:path>')
     def server_static(filepath):
         return bottle.static_file(filepath, root=STATIC_ROOT)
     
     
-
 
     bottle.run(server='wsgiref', host=HOST, port=PORT)
