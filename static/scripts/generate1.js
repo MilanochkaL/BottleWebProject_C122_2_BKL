@@ -12,6 +12,8 @@ function addInputs1(inputContainer, count, color) {
 
     const solveButton = document.getElementById('solveButton');
     solveButton.style.display = 'inline-block';
+    const generateButton = document.getElementById('generateButton');
+    generateButton.style.display = 'inline-block';
 
     let divNames = [];
     for (let j = 0; j < numberOfInputs; j++) {

@@ -78,9 +78,6 @@
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\Euler_cycle.js" />
     <Content Include="static\scripts\generate1.js" />
-    <Content Include="static\scripts\generate2.js">
-      <SubType>Code</SubType>
-    </Content>
     <Content Include="static\scripts\graphInit.js" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="static\scripts\jquery-1.10.2.js" />

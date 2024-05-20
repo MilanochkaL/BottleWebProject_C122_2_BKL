@@ -47,8 +47,11 @@ function readFile(inputContainer, count, color) {
                 row.forEach((value, j) => {
                     var input = document.getElementById(`dynamicInput${i}${j}${inputContainer}`);
                     input.value = value;
-                    var input = document.getElementById(`dynamicInput${j}${i}${inputContainer}`);
-                    input.value = value;
+                    var input2 = document.getElementById(`dynamicInput${j}${i}${inputContainer}`);
+                    input2.value = value;
+                    if (i === j) {
+                        input.value = '0';
+                    }
                 });
             });
         };
