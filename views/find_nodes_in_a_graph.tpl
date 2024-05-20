@@ -84,22 +84,23 @@
             <p><a name="calc"></a></p>
             <label class="size_text">Калькулятор:</label>
                 
-            <div class="text">
-                  <p>k = </p>
-                  <input class="input" type="text" name="input" id="k">
-            </div>
-        <div style="display: flex;">
+            
+        <div class="flex">
         <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
-        <input type="number" id="inputCount" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
+        <input class="inputCount" type="number" id="inputCount" name="matrix-size" min="1" required>
         </div>
-
-        <div style="display: flex;">
-            <div id="inputContainer2" style="margin-left: 20px; margin-bottom: auto; margin-top: auto;"></div>
+        <div class="text">
+            <p>k = </p>
+            <input class="input" type="text" name="input" id="k">
+        </div>
+        <div class="flex">
+            <div id="inputContainer2" class="container"></div>
             <div id="graph_div"></div>
-            <div id="rez" style="margin: 20px; margin-bottom: auto; margin-top: auto;"></div>
+            <div id="rez"></div>
         </div>
-        <button class ="anim_button_1"  onclick="addInputs1('inputContainer2', 'inputCount', '#a8b1e5')">Добавить поля</button>
+        
         <div id="matrix-container"></div>
+      <button class ="anim_button"  onclick="addInputs1('inputContainer2', 'inputCount', '#a8b1e5')">Добавить поля</button>
       <button onclick="readFile('inputContainer2', 'inputCount', '#90b0b6')"margin="20px" class="anim_button">Загрузить из файла</button>
       <button class="anim_button" style="display: none;" id="generateButton" onclick="generateMatrix('inputCount', 'inputContainer2')" margin="20px">Сгенерировать</button>
       <button onclick="addGraph_3('2')" id="solveButton" margin="20px" class="anim_button" style="display: none;">Решить</button>
