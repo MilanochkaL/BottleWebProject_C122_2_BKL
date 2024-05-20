@@ -1,25 +1,31 @@
+// Функция для добавления графа на веб-страницу
 function addGraph_3() {
-    Euler_cycle_js();
+    Euler_cycle_js(); // Вызов функции, возможно, связанной с циклами Эйлера
+
+    // Очистка существующего контейнера с графом
     let container = document.getElementById('graph_div');
     while (container.hasChildNodes()) {
         container.removeChild(container.lastChild);
     }
+
+    // Создание нового элемента div для отображения сетевого графа
     let div = document.createElement('div');
     div.id = "mynetwork";
     div.className = "mynetwork";
     container.appendChild(div);
 
+    // Получаем контейнер с входными данными для матрицы смежности
     let inputContainer = document.getElementById('inputContainer2');
     let matrixRows = inputContainer.children;
     let nodes = [];
     let edges = [];
 
-    // Создание вершин
+    // Создание вершин графа
     for (let i = 0; i < matrixRows.length; i++) {
         nodes.push({ id: i + 1, label: `${i + 1}` }); // Добавляем узел с id и меткой (номер узла)
     }
 
-    // Создание ребер
+    // Создание ребер графа
     for (let i = 0; i < matrixRows.length; i++) {
         let rowInputs = matrixRows[i].children; // Получаем дочерние элементы текущей строки матрицы
         for (let j = 0; j < rowInputs.length; j++) {
