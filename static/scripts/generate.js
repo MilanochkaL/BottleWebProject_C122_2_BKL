@@ -4,7 +4,10 @@ function addInputs() {
         alert('Введите корректное число от 1 до 15. В противном случае что-то может пойти не так!');
         return;
     }
-
+    const solveButton = document.getElementById('solveButton');
+    solveButton.style.display = 'inline-block';
+    const generateButton = document.getElementById('generateButton');
+    generateButton.style.display = 'inline-block';
     let container = document.getElementById('inputContainer2'); // Это место для новых полей
     while (container.hasChildNodes()) {
         container.removeChild(container.lastChild); // Освобождаем место от старых элементов
@@ -23,10 +26,20 @@ function addInputs() {
         let container2 = document.getElementById(divName); // Это место для новых полей
         for (let i = 0; i < numberOfInputs; i++) {
             let input = document.createElement('input');
-            input.style = "width: 30px; margin: 3px; border-radius: 10px; border-color: #90b0b6; border-width: 2px; border-style: solid;";
-            input.name = `dynamicInput${i}`; // Имена для каждого поля для избежания ошибок
+
+                input.value = "0";
+				input.style = "width: 30px; margin: 3px; border-radius: 10px; border-color: #90b0b6; border-width: 2px; border-style: solid;";
+				input.oninput = function() {
+				    let input2 = document.getElementById(`dynamicInput${i}${j}`); // Это место для новых полей
+                    input2.value = input.value;
+                  };
+                      
+            input.name = `dynamicInput${j}${i}`; // Имена для каждого поля для избежания ошибок
+            input.id = `dynamicInput${j}${i}`; // Имена для каждого поля для избежания ошибок
             container2.appendChild(input); // Добавляем новое поле в контейнер
             container2.appendChild(document.createElement('br')); // Предусматриваем дополнительное пространство между полями
         }
     }
 }
+
+

@@ -111,6 +111,7 @@
         margin:20px;
     }
 
+
 .definition_sub {
     border-radius: 10px;
     background-color: #d7f6fc;
@@ -127,6 +128,34 @@
     margin: 15px;
 }
 
+.graphs_sub {
+    width: 80%;
+    display: flex;
+    margin: 40px auto;
+}
+
+.graphs_div_sub {
+    width: 100%;
+    background-color: #FFFF;
+    border-radius: 20px;
+    margin-right: 40px;
+    padding: 40px;
+    font-size: 17px;
+}
+    .graphs_div_sub:nth-child(2) {
+        margin-right: 0;
+    }
+
+
+.mygraph {
+    border-radius: 10px;
+    border-color: #b1d9e1;
+    border-width: 2px;
+    border-style: solid;
+    width: 400px;
+    height: 400px;
+}
+
 .theory_sub {
     margin: 20px 0 20px 20px;
     margin-bottom:40px;
@@ -139,7 +168,7 @@
     }
 
 .img_theory_sub{
-    display: flex;
+    display:flex;
     justify-content: center;
     align-content:inherit;
 }
@@ -176,3 +205,21 @@
 .theory_subgraph_div h1 {
     font-family: 'Kreadon', sans-serif;
 }
+
+.img_style_sub {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*.anim_button1 {
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+    background-size: 200% auto;
+    background-position: left top;
+    border-color: transparent;
+    color: #464646;
+    transition: background-position 0.5s;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+}*/

@@ -11,6 +11,8 @@
     <link rel="shortcut icon" href="static\images\icon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/static/content/kuznetsova2.css">
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
+    
+    <script type="text/javascript" src="https://unpkg.com/vis-network/dist/vis-network.min.js"></script>
 </head>
 
 <body>
@@ -52,16 +54,10 @@
     <script src="/static/scripts/jquery-1.10.2.js"></script>
     <script src="/static/scripts/bootstrap.js"></script>
     <script src="/static/scripts/respond.js"></script>
-    <script src="/static/scripts/generate.js"></script>
-    
-    <script src="/static/scripts/generate2.js"></script>
-    <script src="/static/scripts/graph_constr.js"></script>
-    <script src="/static/scripts/generate_matrix.js"></script>
-
-    
-
-    <script type="text/javascript" src="https://unpkg.com/vis-network/dist/vis-network.min.js"></script>
-    
+    <script src="/static/scripts/readFile.js"></script>
+    <script src="/static/scripts/graphInit.js"></script>    
+    <script src="/static/scripts/generate1.js"></script>
+    <script src="/static/scripts/Euler_cycle.js"></script>
 
 </body>
 </html>

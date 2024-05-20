@@ -92,19 +92,19 @@
         <div class="flex">
             <h3 class = "text">Размерность матрицы:</h3> 
             <input type="number" id="inputCount" name="matrix-size" min="1" class="input2" required>
-        </div>  
-        <div class="flex">
-            <div id="inputContainer" class="container"></div>
-            <div id="graph_div1"></div>
-        </div>
+          </div>      
+          <form id="myForm">
+                <div id="inputContainer2" class="form">
+                </div>
+          </form>
+          <button class ="anim_button_1"  onclick="addInputs1('inputContainer2', 'inputCount', '#a8b1e5')" >Добавить поля</button>
         
-        <div>
-            <button class="anim_button_1" onclick="addInputs()">Добавить поля</button>
-            <button class="anim_button_1" onclick="generateMatrix('inputCount')" margin="20px">Сгенерировать</button>
-            <button class="anim_button_1" onclick="addGraph1()">Решить</button>
-
+        <div >
+            <p class="anim_button_1" id="solveButton" style="display: none;">Решить</p>
         </div>
-        
+        <button onclick="readFile('inputContainer2', 'inputCount', '#a8b1e5')"margin="20px" class="anim_button">Загрузить из файла</button>
     </div>
+            
+    
 
 </body>
