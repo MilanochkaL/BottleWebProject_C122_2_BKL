@@ -35,7 +35,7 @@
     <Compile Include="static\scripts\find_an_Euler_cycle_or_chain.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="find_nodes_in_a_graph.py">
+    <Compile Include="static\scripts\find_nodes_in_a_graph.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
@@ -91,6 +91,9 @@
     <Content Include="static\scripts\jquery.validate.unobtrusive.js" />
     <Content Include="static\scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="static\scripts\modernizr-2.6.2.js" />
+    <Content Include="static\scripts\Nodes_in_a_graph.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="static\scripts\readFile.js" />
     <Content Include="static\scripts\respond.js" />
     <Content Include="static\scripts\respond.min.js" />

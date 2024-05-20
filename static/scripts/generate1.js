@@ -1,9 +1,13 @@
 function addInputs1(inputContainer, count, color) {
+
     let numberOfInputs = parseInt(document.getElementById(count).value);
     if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 15) {
         alert('Введите корректное число от 1 до 15. В противном случае что-то может пойти не так!');
         return;
     }
+
+    const generateButton = document.getElementById('generateButton');
+    generateButton.style.display = 'inline-block';
 
     let container = document.getElementById(inputContainer); // Это место для новых полей
     while (container.hasChildNodes()) {

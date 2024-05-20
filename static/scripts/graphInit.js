@@ -1,5 +1,11 @@
-function addGraph_3() {
-    Euler_cycle_js();
+function addGraph_3(num) {
+    if (num === '3') {
+        Euler_cycle_js();
+    }
+    if (num === '2') {
+        Nodes_in_a_graph_js();
+    }
+
     let container = document.getElementById('graph_div');
     while (container.hasChildNodes()) {
         container.removeChild(container.lastChild);
