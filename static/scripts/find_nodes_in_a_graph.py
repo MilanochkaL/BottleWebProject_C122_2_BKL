@@ -42,7 +42,7 @@ def find_max_neighborhood(adjacency_matrix, k):
     max_neighborhood_vertices = []
 
     for i in range(len(adjacency_matrix)):
-        neighborhood_size = sum(powered_matrix[i])
+        neighborhood_size = sum(reachability_matrix[i])  # Считаем количество вершин достижимых через k шагов
         if neighborhood_size > max_neighborhood_size:
             max_neighborhood_size = neighborhood_size
             max_neighborhood_vertices = [i + 1]
@@ -52,8 +52,8 @@ def find_max_neighborhood(adjacency_matrix, k):
     # Форматирование вывода матрицы
     matrix_output = "\n".join([" ".join(map(str, row)) for row in reachability_matrix])
     vertices_output = ", ".join(map(str, max_neighborhood_vertices))
-    if not isinstance(k, int) or k <= 0:
-            return "k должно быть положительным целым числом"
-     
 
+    if not isinstance(k, int) or k <= 0:
+        return "k должно быть положительным целым числом"
+     
     return f"Матрица ограниченных достижимостей k-го шага:\n{matrix_output}\n\nНаибольшее окружение имеют вершины: {vertices_output}"
