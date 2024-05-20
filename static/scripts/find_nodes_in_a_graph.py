@@ -1,9 +1,9 @@
 def find_max_neighborhood(adjacency_matrix, k):
 
-    #Находит вершины с наибольшим окружением в первых k ярусах.
-    #Вычисляет последовательно степени матрицы смежности и матрицы ограниченных достижимостей.
+    #РЊР°С…РѕРґРёС‚ РІРµСЂС€РёРЅС‹ СЃ РЅР°РёР±РѕР»СЊС€РёРј РѕРєСЂСѓР¶РµРЅРёРµРј РІ РїРµСЂРІС‹С… k В¤СЂСѓСЃР°С….
+    #В¬С‹С‡РёСЃР»В¤РµС‚ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕ СЃС‚РµРїРµРЅРё РјР°С‚СЂРёС†С‹ СЃРјРµР¶РЅРѕСЃС‚Рё Рё РјР°С‚СЂРёС†С‹ РѕРіСЂР°РЅРёС‡РµРЅРЅС‹С… РґРѕСЃС‚РёР¶РёРјРѕСЃС‚РµР№.
     def matrix_multiply(a, b):
-        #Вычисляет произведение двух матриц.
+        #В¬С‹С‡РёСЃР»В¤РµС‚ РїСЂРѕРёР·РІРµРґРµРЅРёРµ РґРІСѓС… РјР°С‚СЂРёС†.
         result = [[0 for _ in range(len(b[0]))] for _ in range(len(a))]
         for i in range(len(a)):
             for j in range(len(b[0])):
@@ -12,14 +12,14 @@ def find_max_neighborhood(adjacency_matrix, k):
         return result
 
     def matrix_power(matrix, k):
-        #Вычисляет k-ю степень матрицы смежности.
+        #В¬С‹С‡РёСЃР»В¤РµС‚ k-СЋ СЃС‚РµРїРµРЅСЊ РјР°С‚СЂРёС†С‹ СЃРјРµР¶РЅРѕСЃС‚Рё.
         result = matrix.copy()
         for _ in range(k - 1):
             result = matrix_multiply(result, matrix)
         return result
 
     def compute_reachability_matrix(matrix):
-        #Вычисляет матрицу ограниченных достижимостей.
+        #В¬С‹С‡РёСЃР»В¤РµС‚ РјР°С‚СЂРёС†Сѓ РѕРіСЂР°РЅРёС‡РµРЅРЅС‹С… РґРѕСЃС‚РёР¶РёРјРѕСЃС‚РµР№.
         reachability = matrix.copy()
         for i in range(len(matrix)):
             for j in range(len(matrix)):
@@ -27,13 +27,13 @@ def find_max_neighborhood(adjacency_matrix, k):
                     reachability[i][j] = float('inf')
         return reachability
 
-    # Вычисление k-й степени матрицы смежности
+    # В¬С‹С‡РёСЃР»РµРЅРёРµ k-Р№ СЃС‚РµРїРµРЅРё РјР°С‚СЂРёС†С‹ СЃРјРµР¶РЅРѕСЃС‚Рё
     powered_matrix = matrix_power(adjacency_matrix, k)
 
-    # Вычисление матрицы ограниченных достижимостей k-го шага
+    # В¬С‹С‡РёСЃР»РµРЅРёРµ РјР°С‚СЂРёС†С‹ РѕРіСЂР°РЅРёС‡РµРЅРЅС‹С… РґРѕСЃС‚РёР¶РёРјРѕСЃС‚РµР№ k-РіРѕ С€Р°РіР°
     reachability_matrix = compute_reachability_matrix(powered_matrix)
 
-    # Поиск вершин с наибольшим окружением
+    # С•РѕРёСЃРє РІРµСЂС€РёРЅ СЃ РЅР°РёР±РѕР»СЊС€РёРј РѕРєСЂСѓР¶РµРЅРёРµРј
     max_neighborhood_size = 0
     max_neighborhood_vertices = []
 
@@ -45,8 +45,8 @@ def find_max_neighborhood(adjacency_matrix, k):
         elif neighborhood_size == max_neighborhood_size:
             max_neighborhood_vertices.append(i + 1)
 
-    # Форматирование вывода матрицы
+    # вЂРѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµ РІС‹РІРѕРґР° РјР°С‚СЂРёС†С‹
     matrix_output = "\n".join([" ".join(map(str, row)) for row in reachability_matrix])
     vertices_output = ", ".join(map(str, max_neighborhood_vertices))
 
-    return f"Матрица ограниченных достижимостей k-го шага:\n"+{matrix_output}+"\n\nНаибольшее окружение имеют вершины: "+{vertices_output}
+    return f"С›Р°С‚СЂРёС†Р° РѕРіСЂР°РЅРёС‡РµРЅРЅС‹С… РґРѕСЃС‚РёР¶РёРјРѕСЃС‚РµР№ k-РіРѕ С€Р°РіР°:\n"+{matrix_output}+"\n\nРЊР°РёР±РѕР»СЊС€РµРµ РѕРєСЂСѓР¶РµРЅРёРµ РёРјРµСЋС‚ РІРµСЂС€РёРЅС‹: "+{vertices_output}
