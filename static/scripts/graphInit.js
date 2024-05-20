@@ -24,6 +24,8 @@ function addGraph_3() {
         let rowInputs = matrixRows[i].children; // Получаем дочерние элементы текущей строки матрицы
         for (let j = 0; j < rowInputs.length; j++) {
             let inputValue = rowInputs[j].value; // Получаем значение текущего input
+            if (isNaN(inputValue))
+                inputValue = 0;
             if (inputValue === '1' && i !== j) { // Если значение равно '1' и это не диагональный элемент
                 // Проверяем, что такого ребра еще нет в массиве edges
                 if (!edges.some(edge => (edge.from === i + 1 && edge.to === j / 2 + 1) || (edge.from === j / 2 + 1 && edge.to === i + 1))) {

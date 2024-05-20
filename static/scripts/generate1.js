@@ -10,11 +10,6 @@ function addInputs1(inputContainer, count, color) {
         container.removeChild(container.lastChild); // Освобождаем место от старых элементов
     }
 
-    if (inputContainer != 'inputContainer_first') {
-        const solveButton = document.getElementById('solveButton');
-        solveButton.style.display = 'inline-block';
-    }
-
     let divNames = [];
     for (let j = 0; j < numberOfInputs; j++) {
         let divName = `div${j}${inputContainer}`;
@@ -48,6 +43,20 @@ function addInputs1(inputContainer, count, color) {
             container2.appendChild(input); // Добавляем новое поле в контейнер
             container2.appendChild(document.createElement('br')); // Предусматриваем дополнительное пространство между полями
         }
+    }
+
+    if (document.getElementById('inputContainer_first').childElementCount > 0) {
+        const solveButton = document.getElementById('genBtn1');
+        solveButton.style.display = 'inline-block';
+    }
+    if (document.getElementById('inputContainer_second').childElementCount > 0) {
+        const solveButton = document.getElementById('genBtn2');
+        solveButton.style.display = 'inline-block';
+    }
+
+    if (document.getElementById('inputContainer_second').childElementCount != 0 && document.getElementById('inputContainer_first').childElementCount != 0) {
+        const solveButton = document.getElementById('solveButton');
+        solveButton.style.display = 'inline-block';
     }
 }
 

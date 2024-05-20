@@ -51,7 +51,7 @@ def find_subgraphs(graph, subgraph):
         sub_graph = [[graph[i][j] for j in vertices] for i in vertices]
 
         if is_isomorphic(sub_graph, subgraph):
-            found_subgraphs.append(list(vertices))
+            found_subgraphs.append([v + 1 for v in vertices])
 
     return f"Найденные подграфы: {found_subgraphs}"
 
