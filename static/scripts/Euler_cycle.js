@@ -22,7 +22,7 @@ function Euler_cycle_js() {
             if (response.ok) {
                 return response.text();
             } else {
-                throw new Error('Îøèáêà îáðàáîòêè ìàòðèöû');
+                throw new Error('Ð¾ÑˆÐ¸Ð±ÐºÐ° Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ¸ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹');
             }
         })
         .then(data => {

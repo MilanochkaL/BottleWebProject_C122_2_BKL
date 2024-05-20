@@ -1,13 +1,14 @@
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РґРѕР±Р°РІР»РµРЅРёСЏ РїРѕР»РµР№ РІРІРѕРґР° РІ СѓРєР°Р·Р°РЅРЅС‹Р№ РєРѕРЅС‚РµР№РЅРµСЂ
 function addInputs1(inputContainer, count, color) {
     let numberOfInputs = parseInt(document.getElementById(count).value);
     if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 15) {
-        alert('Введите корректное число от 1 до 15. В противном случае что-то может пойти не так!');
+        alert('Р’РІРµРґРёС‚Рµ РєРѕСЂСЂРµРєС‚РЅРѕРµ С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 15. Р’ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ С‡С‚Рѕ-С‚Рѕ РјРѕР¶РµС‚ РїРѕР№С‚Рё РЅРµ С‚Р°Рє!');
         return;
     }
 
-    let container = document.getElementById(inputContainer); // Это место для новых полей
+    let container = document.getElementById(inputContainer); // Р­С‚Рѕ РјРµСЃС‚Рѕ РґР»СЏ РЅРѕРІС‹С… РїРѕР»РµР№
     while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild); // Освобождаем место от старых элементов
+        container.removeChild(container.lastChild); // РћСЃРІРѕР±РѕР¶РґР°РµРј РјРµСЃС‚Рѕ РѕС‚ СЃС‚Р°СЂС‹С… СЌР»РµРјРµРЅС‚РѕРІ
     }
 
     const solveButton = document.getElementById('solveButton');
@@ -23,33 +24,16 @@ function addInputs1(inputContainer, count, color) {
         let div = document.createElement('div');
         div.id = divName;
         div.style = "display: flex"
-        container.appendChild(div); // Добавляем новое поле в контейнер
+        container.appendChild(div); // Р”РѕР±Р°РІР»СЏРµРј РЅРѕРІРѕРµ РїРѕР»Рµ РІ РєРѕРЅС‚РµР№РЅРµСЂ
 
-        let container2 = document.getElementById(divName); // Это место для новых полей
+        let container2 = document.getElementById(divName); // Р­С‚Рѕ РјРµСЃС‚Рѕ РґР»СЏ РЅРѕРІС‹С… РїРѕР»РµР№
         for (let i = 0; i < numberOfInputs; i++) {
             let input = document.createElement('input');
-            input.value = "0";
-            if (i === j) {
-                input.value = "0";
-                input.setAttribute('readonly', '');
-                input.style = "width: 30px; margin: 3px; border-radius: 10px; border-width: 2px; border-style: solid;";
-                input.style.borderColor = color;
-            } else {
-                input.value = "0";
-                input.style = "width: 30px; margin: 3px; border-radius: 10px; border-width: 2px; border-style: solid;";
-                input.style.borderColor = color;
-                input.oninput = function () {
-                    let input2 = document.getElementById(`dynamicInput${i}${j}${inputContainer}`); // Это место для новых полей
-                    input2.value = input.value;
-                };
-            }
-            input.name = `dynamicInput${i}`; // Имена для каждого поля для избежания ошибок
-            input.id = `dynamicInput${j}${i}${inputContainer}`;
-            container2.appendChild(input); // Добавляем новое поле в контейнер
-            container2.appendChild(document.createElement('br')); // Предусматриваем дополнительное пространство между полями
+            // РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ СЃС‚РёР»РµР№ Рё Р·РЅР°С‡РµРЅРёР№ РїРѕР»РµР№ РІРІРѕРґР°
         }
     }
 }
+
 
 function generateMatrix(size, inputContainer) {
     let numberOfInputs = parseInt(document.getElementById(size).value);
@@ -57,34 +41,37 @@ function generateMatrix(size, inputContainer) {
     fillMatrixInputs(matrix, 'dynamicInput', inputContainer);
 }
 
+// Р¤СѓРЅРєС†РёСЏ РіРµРЅРµСЂР°С†РёРё СЃРёРјРјРµС‚СЂРёС‡РЅРѕР№ РјР°С‚СЂРёС†С‹ Р·Р°РґР°РЅРЅРѕРіРѕ СЂР°Р·РјРµСЂР°
 function generateSymmetricMatrix(size) {
     let matrix = [];
     for (let i = 0; i < size; i++) {
         let row = [];
         for (let j = 0; j < size; j++) {
             if (i == j) {
-                row.push(0);
+                row.push(0); // Р—Р°РїРѕР»РЅСЏРµРј РґРёР°РіРѕРЅР°Р»СЊРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ РЅСѓР»СЏРјРё
             }
             else if (i <= j) {
-                row.push(Math.round(Math.random()));
+                row.push(Math.round(Math.random())); // Р—Р°РїРѕР»РЅСЏРµРј РІРµСЂС…РЅРёР№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє СЃР»СѓС‡Р°Р№РЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё 0 РёР»Рё 1
             } else {
-                row.push(matrix[j][i]);
+                row.push(matrix[j][i]); // РљРѕРїРёСЂСѓРµРј Р·РЅР°С‡РµРЅРёРµ РёР· СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р° РЅРёР¶РЅРµРіРѕ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° РґР»СЏ РѕР±РµСЃРїРµС‡РµРЅРёСЏ СЃРёРјРјРµС‚СЂРёС‡РЅРѕСЃС‚Рё РјР°С‚СЂРёС†С‹
             }
         }
-        matrix.push(row);
+        matrix.push(row); // Р”РѕР±Р°РІР»СЏРµРј СЃС‚СЂРѕРєСѓ РІ РјР°С‚СЂРёС†Сѓ
     }
-    return matrix;
+    return matrix; // Р’РѕР·РІСЂР°С‰Р°РµРј СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅСѓСЋ СЃРёРјРјРµС‚СЂРёС‡РЅСѓСЋ РјР°С‚СЂРёС†Сѓ
 }
 
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РїРѕР»РµР№ РІРІРѕРґР° РјР°С‚СЂРёС†С‹ Р·РЅР°С‡РµРЅРёСЏРјРё РёР· Р·Р°РґР°РЅРЅРѕР№ РјР°С‚СЂРёС†С‹
 function fillMatrixInputs(matrix, inputPrefix, inputContainer) {
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < matrix[i].length; j++) {
-            let input = document.getElementById(`${inputPrefix}${i}${j}${inputContainer}`);
-            input.value = matrix[i][j];
+            let input = document.getElementById(`${inputPrefix}${i}${j}${inputContainer}`); // РџРѕР»СѓС‡Р°РµРј РїРѕР»Рµ РІРІРѕРґР° РїРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ
+            input.value = matrix[i][j]; // РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ РІРІРѕРґР° СЂР°РІРЅС‹Рј Р·РЅР°С‡РµРЅРёСЋ РёР· РјР°С‚СЂРёС†С‹
         }
     }
 }
 
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РіСЂР°С„Р° РЅР° РѕСЃРЅРѕРІРµ РјР°С‚СЂРёС†С‹ СЃРјРµР¶РЅРѕСЃС‚Рё
 function createGraph1(inputCont, graph) {
     let container = document.getElementById(graph);
     while (container.hasChildNodes()) {
@@ -100,20 +87,20 @@ function createGraph1(inputCont, graph) {
     let nodes = [];
     let edges = [];
 
-    // Создание вершин
+    // РЎРѕР·РґР°РЅРёРµ РІРµСЂС€РёРЅ
     for (let i = 0; i < matrixRows.length; i++) {
-        nodes.push({ id: i + 1, label: `${i + 1}` }); // Добавляем узел с id и меткой (номер узла)
+        nodes.push({ id: i + 1, label: `${i + 1}` }); // Р”РѕР±Р°РІР»СЏРµРј СѓР·РµР» СЃ id Рё РјРµС‚РєРѕР№ (РЅРѕРјРµСЂ СѓР·Р»Р°)
     }
 
-    // Создание ребер
+    // РЎРѕР·РґР°РЅРёРµ СЂРµР±РµСЂ
     for (let i = 0; i < matrixRows.length; i++) {
-        let rowInputs = matrixRows[i].children; // Получаем дочерние элементы текущей строки матрицы
+        let rowInputs = matrixRows[i].children; // РџРѕР»СѓС‡Р°РµРј РґРѕС‡РµСЂРЅРёРµ СЌР»РµРјРµРЅС‚С‹ С‚РµРєСѓС‰РµР№ СЃС‚СЂРѕРєРё РјР°С‚СЂРёС†С‹
         for (let j = 0; j < rowInputs.length; j++) {
-            let inputValue = rowInputs[j].value; // Получаем значение текущего input
-            if (inputValue === '1' && i !== j) { // Если значение равно '1' и это не диагональный элемент
-                // Проверяем, что такого ребра еще нет в массиве edges
+            let inputValue = rowInputs[j].value; // РџРѕР»СѓС‡Р°РµРј Р·РЅР°С‡РµРЅРёРµ С‚РµРєСѓС‰РµРіРѕ input
+            if (inputValue === '1' && i !== j) { // Р•СЃР»Рё Р·РЅР°С‡РµРЅРёРµ СЂР°РІРЅРѕ '1' Рё СЌС‚Рѕ РЅРµ РґРёР°РіРѕРЅР°Р»СЊРЅС‹Р№ СЌР»РµРјРµРЅС‚
+                // РџСЂРѕРІРµСЂСЏРµРј, С‡С‚Рѕ С‚Р°РєРѕРіРѕ СЂРµР±СЂР° РµС‰Рµ РЅРµС‚ РІ РјР°СЃСЃРёРІРµ edges
                 if (!edges.some(edge => (edge.from === i + 1 && edge.to === j / 2 + 1) || (edge.from === j / 2 + 1 && edge.to === i + 1))) {
-                    edges.push({ from: i + 1, to: j / 2 + 1 }); // Добавляем ребро в массив edges
+                    edges.push({ from: i + 1, to: j / 2 + 1 }); // Р”РѕР±Р°РІР»СЏРµРј СЂРµР±СЂРѕ РІ РјР°СЃСЃРёРІ edges
                 }
             }
         }

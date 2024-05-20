@@ -2,7 +2,9 @@ import datetime
 from distutils.file_util import write_file
 import json
 
+# Функция для поиска эйлерова пути или цикла в графе на основе матрицы смежности
 def find_eulerian_path_or_cycle(adjacency_matrix):
+    
     # Функция для проверки, является ли следующее ребро допустимым
     def is_valid_next_edge(u, v):
         if adjacency_matrix[u][v] == 0:
@@ -54,12 +56,13 @@ def find_eulerian_path_or_cycle(adjacency_matrix):
                 res += get_euler_util(v)
         return res
     
+    # Функция для записи результата выполнения в файл JSON
     def write_file_euler(result):
         result_data = {
-        "Execution Time": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-        "Original Matrix": adjacency_matrix_2,
-        "Result": result
-    }
+            "Execution Time": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            "Original Matrix": adjacency_matrix_2,
+            "Result": result
+        }
         try:
             with open('D:\grath2\Rezult_euler.json', 'r', encoding='utf-8') as f:
                 results = json.load(f)
@@ -69,7 +72,7 @@ def find_eulerian_path_or_cycle(adjacency_matrix):
         if "all_results" not in results:
             results["all_results"] = []
 
-        # Check if the matrix already exists in the stored results
+        # Проверяем, существует ли матрица в хранимых результатах
         matrix_exists = False
         for stored_result in results["all_results"]:
             if stored_result["Original Matrix"] == adjacency_matrix_2:
@@ -86,7 +89,7 @@ def find_eulerian_path_or_cycle(adjacency_matrix):
     adjacency_matrix_2 = adjacency_matrix
 
     n = len(adjacency_matrix)
-    adjacency_matrix_2 = [row[:] for row in adjacency_matrix]  # Make a deep copy of the matrix
+    adjacency_matrix_2 = [row[:] for row in adjacency_matrix]  # Создаем глубокую копию матрицы
 
     odd_degree_nodes = [i for i in range(n) if sum(adjacency_matrix[i]) % 2 != 0]
 
@@ -107,6 +110,8 @@ def find_eulerian_path_or_cycle(adjacency_matrix):
 
     start_node = find_start_node()
     path = get_euler_util(start_node)
+    
+    # Записываем результат выполнения в файл
     write_file_euler('Эйлеров ' + ('цикл: ' if path[0] == path[-2] else 'путь: ') + path)
 
     return 'Эйлеров ' + ('цикл: ' if path[0] == path[-2] else 'путь: ') + path
