@@ -16,6 +16,11 @@ class TestFindMaxNeighborhood(unittest.TestCase):
         result = find_max_neighborhood(self.adjacency_matrix, "")
         self.assertEqual(result, "Поле для ввода 'k' не должно быть пустым")
 
+    def test_k_equal_0(self):
+        # Тест на случай, когда k равно 0
+        result = find_max_neighborhood(self.adjacency_matrix, 0)
+        self.assertEqual(result, "Поле для ввода 'k' не должно быть пустым")
+
     def test_non_integer_k(self):
         # Тест на случай, когда k не является целым числом
         result = find_max_neighborhood(self.adjacency_matrix, "0.3")
@@ -37,8 +42,16 @@ class TestFindMaxNeighborhood(unittest.TestCase):
         result = find_max_neighborhood(isolated_matrix, 2)
         self.assertEqual(result, "Все вершины изолированы")
 
+    def test_isolated_vertices2(self):
+        # Тест на случай, когда все вершины изолированы
+        isolated_matrix2 = [[0]]
+        result = find_max_neighborhood(isolated_matrix2, 1)
+        self.assertEqual(result, "Все вершины изолированы")
+
     def test_valid_input(self):
         # Тест на корректный ввод
         result = find_max_neighborhood(self.adjacency_matrix, 2)
         expected_output = "Матрица ограниченных достижимостей k-го шага:\n1 0 1\n0 1 0\n1 0 1\n\nНаибольшее окружение имеют вершины: 1, 3"
         self.assertEqual(result, expected_output)
+
+    

@@ -42,7 +42,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
-    <Compile Include="test.py">
+    <Compile Include="test_kuznetsova.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
