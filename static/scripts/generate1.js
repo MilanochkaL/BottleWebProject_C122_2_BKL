@@ -1,7 +1,7 @@
 function addInputs1(inputContainer, count, color) {
     let numberOfInputs = parseInt(document.getElementById(count).value); // Получаем количество входов
-    if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 15) { // Проверяем на корректность введенного значения
-        alert('Введите корректное число от 1 до 15. В противном случае что-то может пойти не так!'); // Выводим сообщение об ошибке
+    if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 10) { // Проверяем на корректность введенного значения
+        alert('Введите корректное число от 1 до 10. В противном случае что-то может пойти не так!'); // Выводим сообщение об ошибке
         return; // Завершаем функцию
     }
 
