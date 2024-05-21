@@ -84,53 +84,63 @@
       
 	</div>    
 
-      <p><a name="calc"></a></p>
-    <div class="graphs_sub">
+
+<p><a name="calc"></a></p>
+<div class="graphs_sub">
+
 <div class="graphs_div_sub" >
 
 
-  <div style="display: flex;">
-      <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
-      <input type="number" id="inputCount1" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
-  </div>      
-      <div id="graphs_div" style="display: flex;">
+  <div style="display: flex; align-items: center;">
+      <h3 style="margin-bottom: 20px; display: inline-block;">Размерность матрицы исходного графа:</h3> 
+      <input type="number" id="inputCount1" name="matrix-size" min="1" style="margin: 10px; width: 100px; height: 40px; display: inline-block;" required>
+  </div>  
+  
+  <div class="graphs_div" >
       <form id="myForm">
-          <div id="inputContainer_first" style="margin-left: 20px; margin-bottom: 10px;"></div>
+          <div id="inputContainer_first" style=" margin-bottom: 10px;"></div>
       </form>
   </div>
-  <button onclick="addInputs1('inputContainer_first', 'inputCount1', '#90b0b6')" margin-left="40px" margin="20px"  class="anim_button">Добавить поля</button>
-  <button onclick="createGraph1('inputContainer_first', 'mygraph1')" margin="20px" class="anim_button">Создать граф</button>
-  <button onclick="generateMatrix('inputCount1', 'inputContainer_first')" margin="20px" class="anim_button">Сгенерировать</button>
 
-  <button margin="20px" class="anim_button" id="solveButton" style="display: none;">Решить</button>
-  <button onclick="readFile('inputContainer_first', 'inputCount1', '#90b0b6')"margin="20px" class="anim_button">Загрузить из файла</button>
+  <button onclick="addInputs1('inputContainer_first', 'inputCount1', '#90b0b6')"  style="margin-bottom: 10px; margin-right: 5px"  class="anim_button" id="add_fields1">Построить матрицу</button>
+  <button onclick="createGraph1('inputContainer_first', 'mygraph1')" class="anim_button" id="showGraph1" style="display: none; margin-bottom: 10px;">Построить граф</button>
+  <button onclick="generateMatrix('inputCount1', 'inputContainer_first')" class="anim_button" id="genBtn1" style="display: none; margin-right: 5px; margin-bottom: 10px;">Сгенерировать</button>
+  <button onclick="readFile('inputContainer_first', 'inputCount1', '#90b0b6')" class="anim_button">Загрузить из файла</button>
 
-    <div id="mygraph1"></div>
-
-  
+  <div id="mygraph1" ></div>
+   
 </div>
-
 <div class="graphs_div_sub" >
 
-      <div style="display: flex;">
-          <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
-          <input type="number" id="inputCount2" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
-      </div>      
-          <div id="graphs_div" style="display: flex;">
+      <div style="display: flex; align-items: center;">
+          <h3 style="margin-bottom: 20px; display: inline-block;">Размерность матрицы подграфа:</h3> 
+          <input type="number" id="inputCount2" name="matrix-size" min="1" style="margin: 10px; width: 100px; height: 40px; display: inline-block;" required>
+      </div>   
+      
+      <div class="graphs_div" >
           <form id="myForm">
-              <div id="inputContainer_second" style="margin-left: 20px; margin-bottom: 10px;"></div>
+              <div id="inputContainer_second" ></div>
           </form>
       </div>
-      <button onclick="addInputs1('inputContainer_second', 'inputCount2', '#90b0b6')" margin-left="40px" margin="20px"  class="anim_button">Добавить поля</button>
-      <button onclick="createGraph1('inputContainer_second', 'mygraph2')" margin="20px" class="anim_button">Создать граф</button>
-      <button onclick="generateMatrix('inputCount2', 'inputContainer_second')" margin="20px" class="anim_button">Сгенерировать</button>
-      <button onclick="readFile('inputContainer_second', 'inputCount2', '#90b0b6')"margin="20px" class="anim_button">Загрузить из файла</button>
-
-      <button margin="20px" class="anim_button">Решить</button>
-
+      <button onclick="addInputs1('inputContainer_second', 'inputCount2', '#90b0b6')" style="margin-bottom: 10px; margin-right: 5px;" class="anim_button" id="add_fields2">Построить матрицу</button>
+      <button onclick="createGraph1('inputContainer_second', 'mygraph2')" class="anim_button" id="showGraph2" style="display: none; margin-bottom: 10px;" >Построить граф</button>
+      <button onclick="generateMatrix('inputCount2', 'inputContainer_second')" class="anim_button" id="genBtn2" style="display: none; margin-right: 5px; margin-bottom: 10px;">Сгенерировать</button>
+      <button onclick="readFile('inputContainer_second', 'inputCount2', '#90b0b6')" class="anim_button">Загрузить из файла</button>
+      <div style="display: flex; margin-left: 90px">
+      <button onclick="solve_isomorphic_subgraphs_js()" class="anim_button" id="solveButton" style="display: none; margin-top: 10px; font-weight: bold;">Решить</button>
+      </div>
         <div id="mygraph2"></div>
 
 </div>
 </div>
+
+<div style="display: flex; justify-content: center;">
+    <div id="result_sub_div" style="display: none; width: 80%; background-color: #FFFF; border-radius: 20px; margin: 40px 0; padding: 40px; font-size: 20px; justify-content: center; align-items: center; text-align: center; ">
+        <p><a name="result"></a></p>
+        <div id="result_sub"></div>
+    </div>
+</div>
+
+
 
 </body>
