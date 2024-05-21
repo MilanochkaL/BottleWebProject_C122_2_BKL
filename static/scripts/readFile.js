@@ -1,63 +1,74 @@
+// Функция для чтения содержимого файла с матрицей из элемента input
 function readFile(inputContainer, count, color) {
-    const fileInput = document.createElement('input'); // Создаем новый элемент input
-    fileInput.type = 'file'; // Устанавливаем тип файла для input
-    fileInput.accept = '.txt'; // Устанавливаем фильтр для выбора только текстовых файлов
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.txt';
 
-    fileInput.addEventListener('change', function () { // Добавляем слушатель события изменения в input
-        const file = this.files[0]; // Получаем выбранный файл
-        const reader = new FileReader(); // Создаем объект FileReader
+    // Обработчик события изменения файла
+    fileInput.addEventListener('change', function () {
+        const file = this.files[0];
+        const reader = new FileReader();
 
-        reader.onload = function (event) { // Событие загрузки файла
-            const content = event.target.result; // Получаем содержимое файла
-            const rows = content.trim().split('\n'); // Разделяем содержимое файла на строки
+        // Обработчик загрузки файла
+        reader.onload = function (event) {
+            const content = event.target.result;
+            const rows = content.trim().split('\n');
 
-            // Получаем размер матрицы по длине первой строки файла
-            const size = rows[0].trim().replace(/\s/g, '').length; // Определяем размер матрицы
+            // Получение размера матрицы из длины первой строки файла
+            const size = rows[0].trim().replace(/\s/g, '').length;
 
-            const matrix = []; // Инициализируем матрицу
-            let error = false; // Устанавливаем флаг ошибки в false
+            const matrix = [];
+            let error = false;
 
-            rows.forEach((row, i) => { // Перебираем строки файла
-                if (i >= size) return; // Если строк больше размера, пропускаем
+            // Парсинг строк из файла в матрицу
+            rows.forEach((row, i) => {
+                if (i >= size) return;
 
-                const elements = row.trim().replace(/\s/g, '').split(''); // Разделяем элементы строки
+                const elements = row.trim().replace(/\s/g, '').split('');
 
-                if (elements.length !== size) { // Проверка на соответствие размера
-                    error = true; // Устанавливаем флаг ошибки
+                if (elements.length !== size) {
+                    error = true;
                 }
 
-                const sanitizedRow = elements.map(el => el === '1' ? 1 : el === '0' ? 0 : null); // Преобразуем элементы строки в числа
+                // Преобразование значений в матрице к числовому формату
+                const sanitizedRow = elements.map(el => el === '1' ? 1 : el === '0' ? 0 : null);
 
-                if (sanitizedRow.includes(null)) { // Проверяем наличие нулевых значений
-                    error = true; // Устанавливаем флаг ошибки
+                if (sanitizedRow.includes(null)) {
+                    error = true;
                 }
 
-                matrix.push(sanitizedRow); // Добавляем строку в матрицу
+                matrix.push(sanitizedRow);
             });
 
-            if (error || matrix.length !== size) { // Проверяем наличие ошибок в матрице
-                alert('Ошибка: Матрица должна быть квадратной и содержать только 0 и 1!'); // Выводим сообщение об ошибке
-                return; // Завершаем функцию
+            // Проверка на ошибки в матрице
+            if (error || matrix.length !== size) {
+                alert('Ошибка: Матрица должна быть квадратной и содержать только 0 и 1!');
+                return;
             }
 
-            const sizeInput = document.getElementById(count); // Получаем элемент по идентификатору count
-            sizeInput.value = size; // Устанавливаем значение в поле размера
+            // Установка размера матрицы в соответствующий input
+            const sizeInput = document.getElementById(count);
+            sizeInput.value = size;
+            addInputs1(inputContainer, count, color);
 
-            addInputs1(inputContainer, count, color); // Вызываем функцию addInputs1
-
-            matrix.forEach((row, i) => { // Перебираем строки и столбцы матрицы
+            // Заполнение входных полей матрицы значениями из файла
+            matrix.forEach((row, i) => {
                 row.forEach((value, j) => {
-                    var input = document.getElementById(`dynamicInput${i}${j}${inputContainer}`); // Получаем элемент input по идентификатору
-                    input.value = value; // Устанавливаем значение элемента
-
-                    var input = document.getElementById(`dynamicInput${j}${i}${inputContainer}`); // Получаем элемент input по идентификатору
-                    input.value = value; // Устанавливаем значение элемента
+                    var input = document.getElementById(`dynamicInput${i}${j}${inputContainer}`);
+                    input.value = value;
+                    var input2 = document.getElementById(`dynamicInput${j}${i}${inputContainer}`);
+                    input2.value = value;
+                    if (i === j) {
+                        input.value = '0';
+                    }
                 });
             });
         };
 
-        reader.readAsText(file); // Читаем содержимое файла как текст
+        // Чтение файла как текстового файла
+        reader.readAsText(file);
     });
 
-    fileInput.click(); // Программно нажимаем на элемент input для выбора файла
+    // Эмуляция нажатия на элемент input для выбора файла
+    fileInput.click();
 }
