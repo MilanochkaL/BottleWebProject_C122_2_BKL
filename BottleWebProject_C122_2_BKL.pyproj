@@ -35,7 +35,7 @@
     <Compile Include="static\scripts\find_an_Euler_cycle_or_chain.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="static\scripts\find_nodes_in_a_graph.py">
+    <Compile Include="find_nodes_in_a_graph.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
