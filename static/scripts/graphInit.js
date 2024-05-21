@@ -1,3 +1,4 @@
+//Функция для генерации выводла графа и вызова решения
 function addGraph(num) {
     if (num === '3') {
         Euler_cycle_js();
