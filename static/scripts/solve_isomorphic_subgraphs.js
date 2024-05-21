@@ -23,6 +23,9 @@ function solve_isomorphic_subgraphs_js() {
         matrix1[i] = [];
         for (let j = 0; j < size1; j++) {
             const input = document.getElementById(`dynamicInput${i}${j}inputContainer_first`);
+            if (input.value !== '1') {
+                input.value = '0';
+            }
             matrix1[i][j] = parseInt(input.value);
         }
     }
@@ -32,6 +35,9 @@ function solve_isomorphic_subgraphs_js() {
         matrix2[i] = [];
         for (let j = 0; j < size2; j++) {
             const input = document.getElementById(`dynamicInput${i}${j}inputContainer_second`);
+            if (input.value !== '1') {
+                input.value = '0';
+            }
             matrix2[i][j] = parseInt(input.value);
         }
     }
