@@ -29,29 +29,29 @@ def find_max_neighborhood(adjacency_matrix, k):  # Определяем функ
                         reachability[i][j] = 1
         return reachability
 
-    def write_file_nodes(result):  # Определяем функцию write_file_euler для записи результатов в файл JSON
+    def write_file_nodes(result):
         result_data = {"Execution Time": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "Original Matrix": adjacency_matrix, "Result": result}
         try:
-            with open('C:\Users\Надежда\Desktop\УП_02.02\BottleWebProject_C122_2_BKL\Nodes_graph.json', 'r') as f:
-                results = json.load(f)  # Загружаем данные из файла JSON
+            with open('C:\\Users\\Надежда\\Desktop\\УП_02.02\\BottleWebProject_C122_2_BKL\\Nodes_graph.json', 'r') as f:
+                results = json.load(f)
         except (FileNotFoundError, json.JSONDecodeError):
-            results = {}  # Если произошла ошибка, создаем пустой словарь results
+            results = {}
 
         if "all_results" not in results:
-            results["all_results"] = []  # Если в results нет ключа "all_results", создаем пустой список
+            results["all_results"] = []
 
         matrix_exists = False
         for stored_result in results["all_results"]:
-            if stored_result["Original Matrix"] == adjacency_matrix:  # Проверяем, есть ли результаты для данной матрицы
+            if stored_result["Original Matrix"] == adjacency_matrix:
                 stored_result["Execution Time"] = result_data["Execution Time"]
                 matrix_exists = True
                 break
 
-        if not matrix_exists:  # Если матрица не существует в результате
-            results["all_results"].append(result_data)  # Добавляем результат в список
+        if not matrix_exists:
+            results["all_results"].append(result_data)
 
-        with open('C:\Users\Надежда\Desktop\УП_02.02\BottleWebProject_C122_2_BKL\Nodes_graph.json', 'w', encoding='utf-8') as file:
-            json.dump(results, file, ensure_ascii=False, indent=4)  # Записываем результаты в файл JSON
+        with open('C:\\Users\\Надежда\\Desktop\\УП_02.02\\BottleWebProject_C122_2_BKL\\Nodes_graph.json', 'w', encoding='utf-8') as file:
+            json.dump(results, file, ensure_ascii=False, indent=4)
 
     powered_matrix = matrix_power(adjacency_matrix, k)  # Вычисляем k-ю степень матрицы смежности
 
@@ -74,6 +74,6 @@ def find_max_neighborhood(adjacency_matrix, k):  # Определяем функ
     if not isinstance(k, int) or k <= 0:  # Проверка на корректность параметра k
         return "k должно быть положительным целым числом"
 
-    write_file_nodes("Матрица ограниченных достижимостей k-го шага:\n{matrix_output}\n\nНаибольшее окружение имеют вершины: {vertices_output}")
+    write_file_nodes(f"Матрица ограниченных достижимостей k-го шага:\n{matrix_output} окружение имеют вершины: {vertices_output}")
      
     return f"Матрица ограниченных достижимостей k-го шага:\n{matrix_output}\n\nНаибольшее окружение имеют вершины: {vertices_output}"  # Возвращаем результат

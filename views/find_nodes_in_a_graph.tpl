@@ -91,7 +91,7 @@
         </div>
         <div class="text">
             <p>k = </p>
-            <input class="input" type="text" name="input" id="k">
+            <input class="input" type="number" name="input" id="k">
         </div>
         <div class="flex">
             <div id="inputContainer2" class="container"></div>
