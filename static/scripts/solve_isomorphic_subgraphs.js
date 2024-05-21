@@ -1,7 +1,18 @@
 function solve_isomorphic_subgraphs_js() {
+
+    const result_sub = document.getElementById('result_sub_div');
+    result_sub.style.display = 'inline-block';
+    result_sub.style.display = 'flex';
+    result_sub.style.flexDirection = 'column';
+    window.location.hash = "#result";
+
     const sizeInput1 = document.getElementById('inputCount1');
     const size1 = parseInt(sizeInput1.value);
     let matrix1 = [];
+
+    const sizeInput2 = document.getElementById('inputCount2');
+    const size2 = parseInt(sizeInput2.value);
+    let matrix2 = [];
 
     // Gather matrix data from input fields for the original graph
     for (let i = 0; i < size1; i++) {
@@ -11,10 +22,6 @@ function solve_isomorphic_subgraphs_js() {
             matrix1[i][j] = parseInt(input.value);
         }
     }
-
-    const sizeInput2 = document.getElementById('inputCount2');
-    const size2 = parseInt(sizeInput2.value);
-    let matrix2 = [];
 
     // Gather matrix data from input fields for the subgraph
     for (let i = 0; i < size2; i++) {

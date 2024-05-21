@@ -41,18 +41,26 @@ def is_isomorphic(g1, g2):
 
     return is_isomorphic_rec({})
 
+
 def find_subgraphs(graph, subgraph):
     n = len(graph)
     m = len(subgraph)
     found_subgraphs = []
-    
 
     for vertices in itertools.combinations(range(n), m):
         sub_graph = [[graph[i][j] for j in vertices] for i in vertices]
 
         if is_isomorphic(sub_graph, subgraph):
-            found_subgraphs.append([v + 1 for v in vertices])
+            found_vertices = [v + 1 for v in vertices]
+            found_subgraphs.append(found_vertices)
 
-    return f"Найденные подграфы: {found_subgraphs}"
+    if found_subgraphs:
+        output = "Найденные подграфы:"
+        for idx, vertices in enumerate(found_subgraphs, 1):
+            output += f"\nПодграф {idx}: {vertices}"
+    else:
+        output = "Подграфы не найдены."
+
+    return output
 
 

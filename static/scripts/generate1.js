@@ -1,7 +1,7 @@
 function addInputs1(inputContainer, count, color) {
     let numberOfInputs = parseInt(document.getElementById(count).value);
-    if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 15) {
-        alert('Введите корректное число от 1 до 15. В противном случае что-то может пойти не так!');
+    if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 10) {
+        alert('Введите корректное число от 1 до 10. В противном случае что-то может пойти не так!');
         return;
     }
 
@@ -45,13 +45,18 @@ function addInputs1(inputContainer, count, color) {
         }
     }
 
+    // Условия появления кнопок для страницы поиска подграфов
     if (document.getElementById('inputContainer_first').childElementCount > 0) {
-        const solveButton = document.getElementById('genBtn1');
-        solveButton.style.display = 'inline-block';
+        const genBtn1 = document.getElementById('genBtn1');
+        genBtn1.style.display = 'inline-block';
+        const showGraph1 = document.getElementById('showGraph1');
+        showGraph1.style.display = 'inline-block';
     }
     if (document.getElementById('inputContainer_second').childElementCount > 0) {
-        const solveButton = document.getElementById('genBtn2');
-        solveButton.style.display = 'inline-block';
+        const genBtn2 = document.getElementById('genBtn2');
+        genBtn2.style.display = 'inline-block';
+        const showGraph2 = document.getElementById('showGraph2');
+        showGraph2.style.display = 'inline-block';
     }
 
     if (document.getElementById('inputContainer_second').childElementCount != 0 && document.getElementById('inputContainer_first').childElementCount != 0) {
