@@ -14,6 +14,10 @@ function solve_isomorphic_subgraphs_js() {
     const size2 = parseInt(sizeInput2.value);
     let matrix2 = [];
 
+    if (size2 > size1) {
+        alert('Размер подграфа должен быть меньше или равен исходному графу!');
+    }
+
     // Gather matrix data from input fields for the original graph
     for (let i = 0; i < size1; i++) {
         matrix1[i] = [];
