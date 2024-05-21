@@ -1,8 +1,11 @@
-// Функция для добавления графа на веб-страницу
-function addGraph_3() {
-    Euler_cycle_js(); // Вызов функции, возможно, связанной с циклами Эйлера
+function addGraph_3(num) {
+    if (num === '3') {
+        Euler_cycle_js();
+    }
+    if (num === '2') {
+        Nodes_in_a_graph_js();
+    }
 
-    // Очистка существующего контейнера с графом
     let container = document.getElementById('graph_div');
     while (container.hasChildNodes()) {
         container.removeChild(container.lastChild);

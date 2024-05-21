@@ -127,3 +127,37 @@
     background-position: right bottom;
     color: #000;
 }
+
+.mynetwork_1 {
+    border-radius: 10px;
+    border-color: #a8b1e5;
+    border-width: 2px;
+    border-style: solid;
+    margin: 15px;
+    width: 400px;
+    height: 400px;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    margin-left: 20px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.inputCount {
+    margin: 15px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+}
+
+.rez {
+    margin: 20px;
+    margin-top: auto;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
