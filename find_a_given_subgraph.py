@@ -1,5 +1,9 @@
 
+
 import itertools 
+import datetime
+from distutils.file_util import write_file
+import json
 
 def is_isomorphic(g1, g2):
     n1 = len(g1)
@@ -61,6 +65,31 @@ def find_subgraphs(graph, subgraph):
     else:
         output = "Подграфы не найдены."
 
+    # Запись результатов в файл JSON
+    write_file_subgraphs(graph, subgraph, found_subgraphs)
+
     return output
 
+def write_file_subgraphs(graph, subgraph, found_subgraphs):
+    result_data = {
+        "Execution Time": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        "Original Graph": graph,
+        "Subgraph": subgraph,
+        "Found Subgraphs": found_subgraphs
+    }
+
+    try:
+        file_path = r'C:\Users\Aleksandra\OneDrive\Документы\3к\практика\BottleWebProject_C122_2_BKL\Rezult_subgraphs.json'
+        with open(file_path, 'r', encoding='utf-8') as f:
+            results = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        results = {}
+
+    if "all_results" not in results:
+        results["all_results"] = []
+
+    results["all_results"].append(result_data)
+
+    with open(file_path, 'w', encoding='utf-8') as file:
+        json.dump(results, file, ensure_ascii=False, indent=4)
 

@@ -35,13 +35,13 @@
     <Compile Include="find_an_Euler_cycle_or_chain.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="find_a_given_subgraph.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="find_nodes_in_a_graph.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
-    <Compile Include="static\scripts\find_a_given_subgraph.py">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\" />
@@ -55,6 +55,9 @@
   <ItemGroup>
     <Content Include="requirements.txt" />
     <Content Include="Rezult_euler.json" />
+    <Content Include="Rezult_subgraphs.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="static\content\beloshitskaya1.css" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
