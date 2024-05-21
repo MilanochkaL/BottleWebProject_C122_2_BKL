@@ -10,7 +10,6 @@ import sys
 import routes
 import find_an_Euler_cycle_or_chain as fe
 
-from static.scripts import find_an_Euler_cycle_or_chain as fe
 from static.scripts import find_a_given_subgraph as fs
 
 if '--debug' in sys.argv[1:] or 'SERVER_DEBUG' in os.environ:

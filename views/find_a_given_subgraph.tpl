@@ -127,7 +127,7 @@
       <button onclick="generateMatrix('inputCount2', 'inputContainer_second')" class="anim_button" id="genBtn2" style="display: none; margin-right: 5px; margin-bottom: 10px;">Сгенерировать</button>
       <button onclick="readFile('inputContainer_second', 'inputCount2', '#90b0b6')" class="anim_button">Загрузить из файла</button>
       <div style="display: flex; margin-left: 90px">
-      <button onclick="solve_isomorphic_subgraphs_js()" class="anim_button" id="solveButton" style="display: none; margin-top: 10px; font-weight: bold;">Решить</button>
+      <button onclick="solve_isomorphic_subgraphs_js()" class="anim_button" id="solveButton1" style="display: none; margin-top: 10px; font-weight: bold;">Решить</button>
       </div>
         <div id="mygraph2"></div>
 
