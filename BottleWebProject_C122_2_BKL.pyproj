@@ -38,7 +38,7 @@
     <Compile Include="find_a_given_subgraph.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="static\scripts\find_nodes_in_a_graph.py">
+    <Compile Include="find_nodes_in_a_graph.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
@@ -55,6 +55,7 @@
   <ItemGroup>
     <Content Include="requirements.txt" />
     <Content Include="Rezult_euler.json" />
+    <Content Include="Rezult_nodes.json" />
     <Content Include="Rezult_subgraphs.json">
       <SubType>Code</SubType>
     </Content>
