@@ -18,7 +18,7 @@ function solve_isomorphic_subgraphs_js() {
         alert('Размер подграфа должен быть меньше или равен исходному графу!');
     }
 
-    // Gather matrix data from input fields for the original graph
+    // Собираем данные матрицы из input-полей для подграфа
     for (let i = 0; i < size1; i++) {
         matrix1[i] = [];
         for (let j = 0; j < size1; j++) {
@@ -42,24 +42,32 @@ function solve_isomorphic_subgraphs_js() {
         }
     }
 
+    // Отправляем запрос на сервер с помощью функции fetch
+    // Передаем ссылку на эндпоинт '/solve_isomorphic_subgraphs'
+    // Указываем, что это POST-запрос
     fetch('/solve_isomorphic_subgraphs', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
+        headers: { // Устанавливаем заголовки запроса
+            'Content-Type': 'application/json', // Указываем, что тип содержимого - JSON
         },
         body: JSON.stringify({ matrix1: matrix1, matrix2: matrix2 }),
+        // Преобразуем данные в формат JSON и передаем их в теле запроса
     })
         .then(response => {
+            // Если ответ от сервера успешен, возвращаем текст ответа
             if (response.ok) {
                 return response.text();
             } else {
+                // Если ответ от сервера не успешен, бросаем ошибку
                 throw new Error('Error processing matrices');
             }
         })
         .then(data => {
+            // Устанавливаем текст элемента с идентификатором 
             document.getElementById('result_sub').innerText = data;
         })
         .catch(error => {
+            // Выводим ошибку в консоль
             console.error(error);
         });
 }

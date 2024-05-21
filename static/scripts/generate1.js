@@ -148,6 +148,36 @@ function createGraph1(inputCont, graph) {
         nodes: new vis.DataSet(nodes),
         edges: new vis.DataSet(edges)
     };
-    let options = {};
-    let network = new vis.Network(networkContainer, data, options);
+    var options = {
+        physics: {
+            enabled: true,
+            barnesHut: {
+                gravitationalConstant: -2000,
+                centralGravity: 0.3,
+                springLength: 95,
+                springConstant: 0.04,
+                damping: 0.09
+            },
+            maxVelocity: 50,
+            minVelocity: 0.1,
+            timestep: 0.5,
+            repulsion: {
+                nodeDistance: 100, // расстояние, на котором узлы начинают отталкиваться
+                centralGravity: 0.2, // "гравитация" узлов к центру контейнера
+                springLength: 200, // длина пружин между узлами
+                springConstant: 0.05 // жесткость пружин
+            }
+        },
+        interaction: {
+            dragNodes: true,
+            dragView: true,
+            zoomView: false
+        },
+        nodes: {
+            fixed: false // разрешить узлам перемещаться
+        }
+    };
+
+    var network = new vis.Network(networkContainer, data, options);
+    network.fit();
 }
