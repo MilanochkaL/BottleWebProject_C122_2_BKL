@@ -141,6 +141,7 @@
     margin-right: 40px;
     padding: 40px;
     font-size: 17px;
+
 }
     .graphs_div_sub:nth-child(2) {
         margin-right: 0;
@@ -211,15 +212,9 @@
     height: auto;
 }
 
+.graphs_div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
 
-/*.anim_button1 {
-    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
-    background-size: 200% auto;
-    background-position: left top;
-    border-color: transparent;
-    color: #464646;
-    transition: background-position 0.5s;
-    border-radius: 10px;
-    width: 120px;
-    height: 40px;
-}*/

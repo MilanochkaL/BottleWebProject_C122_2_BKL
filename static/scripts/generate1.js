@@ -1,3 +1,4 @@
+// ������� ��� ���������� ����� ����� � ��������� ���������
 function addInputs1(inputContainer, count, color) {
     let numberOfInputs = parseInt(document.getElementById(count).value); // Получаем количество входов
     if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 10) { // Проверяем на корректность введенного значения
@@ -13,8 +14,12 @@ function addInputs1(inputContainer, count, color) {
         container.removeChild(container.lastChild); // Удаляем старые элементы из контейнера
     }
 
-    const solveButton = document.getElementById('solveButton'); // Получаем кнопку "Решить"
-    solveButton.style.display = 'inline-block'; // Устанавливаем видимость кнопки
+    if (inputContainer != "inputContainer_first" && inputContainer != "inputContainer_second") {
+        const solveButton = document.getElementById('solveButton');
+        solveButton.style.display = 'inline-block';
+        const generateButton = document.getElementById('generateButton');
+        generateButton.style.display = 'inline-block';
+    }
 
     let divNames = [];
     for (let j = 0; j < numberOfInputs; j++) {
@@ -44,13 +49,33 @@ function addInputs1(inputContainer, count, color) {
                     input2.value = input.value; // Устанавливаем значение второго input равным первому
                 };
             }
-            input.name = `dynamicInput${i}`; // Устанавливаем имя для избежания ошибок
-            input.id = `dynamicInput${j}${i}${inputContainer}`; // Устанавливаем id для input
-            container2.appendChild(input); // Добавляем input во внутренний контейнер
-            container2.appendChild(document.createElement('br')); // Добавляем пробел между полями
+            input.name = `dynamicInput${i}`; // ����� ��� ������� ���� ��� ��������� ������
+            input.id = `dynamicInput${j}${i}${inputContainer}`;
+            container2.appendChild(input); // ��������� ����� ���� � ���������
+            container2.appendChild(document.createElement('br')); // ��������������� �������������� ������������ ����� ������
         }
     }
+
+    // ������� ��������� ������ ��� �������� ������ ���������
+    if (document.getElementById('inputContainer_first').childElementCount > 0) {
+        const genBtn1 = document.getElementById('genBtn1');
+        genBtn1.style.display = 'inline-block';
+        const showGraph1 = document.getElementById('showGraph1');
+        showGraph1.style.display = 'inline-block';
+    }
+    if (document.getElementById('inputContainer_second').childElementCount > 0) {
+        const genBtn2 = document.getElementById('genBtn2');
+        genBtn2.style.display = 'inline-block';
+        const showGraph2 = document.getElementById('showGraph2');
+        showGraph2.style.display = 'inline-block';
+    }
+
+    if (document.getElementById('inputContainer_second').childElementCount != 0 && document.getElementById('inputContainer_first').childElementCount != 0) {
+        const solveButton1 = document.getElementById('solveButton1');
+        solveButton1.style.display = 'inline-block';
+    }
 }
+
 
 function generateMatrix(size, inputContainer) {
     let numberOfInputs = parseInt(document.getElementById(size).value); // Получаем количество входов
@@ -58,6 +83,7 @@ function generateMatrix(size, inputContainer) {
     fillMatrixInputs(matrix, 'dynamicInput', inputContainer); // Заполняем поля ввода матрицы
 }
 
+// ������� ��������� ������������ ������� ��������� �������
 function generateSymmetricMatrix(size) {
     let matrix = [];
     for (let i = 0; i < size; i++) {
@@ -101,19 +127,19 @@ function createGraph1(inputCont, graph) {
     let nodes = [];
     let edges = [];
 
-    // Создание вершин
+    // �������� ������
     for (let i = 0; i < matrixRows.length; i++) {
-        nodes.push({ id: i + 1, label: `${i + 1}` }); // Добавляем узел с id и меткой (номер узла)
+        nodes.push({ id: i + 1, label: `${i + 1}` }); // ��������� ���� � id � ������ (����� ����)
     }
 
-    // Создание ребер
+    // �������� �����
     for (let i = 0; i < matrixRows.length; i++) {
-        let rowInputs = matrixRows[i].children; // Получаем дочерние элементы текущей строки матрицы
+        let rowInputs = matrixRows[i].children; // �������� �������� �������� ������� ������ �������
         for (let j = 0; j < rowInputs.length; j++) {
             let inputValue = rowInputs[j].value; // Получаем значение текущего input
             if (inputValue === '1' && i !== j) { // Если значение равно '1' и это не диагональный элемент
                 if (!edges.some(edge => (edge.from === i + 1 && edge.to === j / 2 + 1) || (edge.from === j / 2 + 1 && edge.to === i + 1))) {
-                    edges.push({ from: i + 1, to: j / 2 + 1 }); // Добавляем ребро в массив edges
+                    edges.push({ from: i + 1, to: j / 2 + 1 }); // ��������� ����� � ������ edges
                 }
             }
         }

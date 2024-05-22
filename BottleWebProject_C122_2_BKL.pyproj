@@ -19,8 +19,7 @@
     <Name>BottleWebProject_C122_2_BKL</Name>
     <RootNamespace>BottleWebProject_C122_2_BKL</RootNamespace>
     <InterpreterId>MSBuild|Python9_1|$(MSBuildProjectFullPath)</InterpreterId>
-    <WebBrowserPort>
-    </WebBrowserPort>
+    <WebBrowserPort>63459</WebBrowserPort>
     <TestFramework>unittest</TestFramework>
     <UnitTestPattern>test*.py</UnitTestPattern>
     <UnitTestRootDirectory>.</UnitTestRootDirectory>
@@ -38,10 +37,16 @@
     <Compile Include="find_an_Euler_cycle_or_chain.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="find_a_given_subgraph.py">
+    <Compile Include="find_nodes_in_a_graph.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="find_nodes_in_a_graph.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_nodes_isolated_matrix.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_nodes_value_k.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -86,6 +91,7 @@
     <Content Include="static\scripts\bootstrap.js" />
     <Content Include="static\scripts\bootstrap.min.js" />
     <Content Include="static\scripts\Euler_cycle.js" />
+    <Content Include="static\scripts\solve_isomorphic_subgraphs.js" />
     <Content Include="static\scripts\generate1.js" />
     <Content Include="static\scripts\graphInit.js" />
     <Content Include="static\scripts\jquery-1.10.2.intellisense.js" />

@@ -6,7 +6,10 @@ function Euler_cycle_js() {
     for (let i = 0; i < size; i++) {
         matrix[i] = [];
         for (let j = 0; j < size; j++) {
-            const input = document.getElementById(`dynamicInput${i}${j}inputContainer2`);
+            let input = document.getElementById(`dynamicInput${i}${j}inputContainer2`);
+            if (input.value !== '1') {
+                input.value = '0';
+            }
             matrix[i][j] = parseInt(input.value);
         }
     }
@@ -22,7 +25,7 @@ function Euler_cycle_js() {
             if (response.ok) {
                 return response.text();
             } else {
-                throw new Error('Îøèáêà îáðàáîòêè ìàòðèöû');
+                throw new Error('Ð¾ÑˆÐ¸Ð±ÐºÐ° Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ¸ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹');
             }
         })
         .then(data => {

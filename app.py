@@ -39,11 +39,19 @@ if __name__ == '__main__':
         k = request.json.get('k')
         return fm.find_max_neighborhood(adjacency_matrix,k)
 
+    
+    @bottle.post('/solve_isomorphic_subgraphs')
+    def subgraphs():
+        matrix1 = request.json.get('matrix1')
+        matrix2 = request.json.get('matrix2')
+
+        # Выполните поиск изоморфных подграфов и верните результат
+        return fs.find_subgraphs(matrix1, matrix2)
+
     @bottle.route('/static/<filepath:path>')
     def server_static(filepath):
         return bottle.static_file(filepath, root=STATIC_ROOT)
     
     
-
 
     bottle.run(server='wsgiref', host=HOST, port=PORT)
