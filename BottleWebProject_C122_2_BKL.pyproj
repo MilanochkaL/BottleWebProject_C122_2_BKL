@@ -42,7 +42,13 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
-    <Compile Include="test_kuznetsova.py">
+    <Compile Include="test_nodes_valid_input_matrix.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_nodes_isolated_matrix.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_nodes_value_k.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
