@@ -9,8 +9,9 @@ import json
 import os
 import sys
 import routes
-from static.scripts import find_an_Euler_cycle_or_chain as fe
 import find_nodes_in_a_graph as fm
+import find_an_Euler_cycle_or_chain as fe
+import find_a_given_subgraph as fs
 
 if '--debug' in sys.argv[1:] or 'SERVER_DEBUG' in os.environ:
     bottle.debug(True)

@@ -35,20 +35,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
-    <Compile Include="static\scripts\find_an_Euler_cycle_or_chain.py">
+    <Compile Include="find_an_Euler_cycle_or_chain.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="find_a_given_subgraph.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="find_nodes_in_a_graph.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="routes.py" />
-    <Compile Include="test_nodes_valid_input_matrix.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="test_nodes_isolated_matrix.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="test_nodes_value_k.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -63,7 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="Rezult_euler.json" />
     <Content Include="Rezult_nodes.json" />
+    <Content Include="Rezult_subgraphs.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="static\content\beloshitskaya1.css" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
