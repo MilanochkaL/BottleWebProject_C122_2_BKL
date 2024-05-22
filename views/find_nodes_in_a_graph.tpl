@@ -2,7 +2,7 @@
 <body class="background">
     <div class = "rectangle">
         <h1 class="center">Поиск в графе вершин, имеющих наибольшее окружение</h1>
-            <h3><a href="#calc">Перейти к калькулятору</a></h3>
+            <h2><a href="#calc">Перейти к калькулятору</a></h2>
             <div class="definitions">
                 <h3>Основные определения</h3>
                 <p><b>Графом G(V,E)</b> называется совокупность двух множеств – непустого множества V (вершин) и множества E 
@@ -15,7 +15,6 @@
                 (число вершин в ее
                 окружении). Обозначается: deg(v) (
                 deg(v) || (u,v): u,v∈V,(u,v)||E).</p>
-
 
                 <p><b>Вершина v графа G называется изолированной,</b> если ее степень равна нулю (deg(v)=0).</p>
 
@@ -36,7 +35,6 @@
                 <p>Множество вершин, находящихся на одинаковом расстоянии n от вершины v (обозначается D (v,n) ), называется ярусом: </p>
                 <p>D(v,n)={u∈V|d(v,u)=n}</p>
 
-
                 <p>Ясно, что всякий связный граф однозначно разбивается на ярусы относительно данной вершины.</p>
             </div>
 
@@ -50,7 +48,6 @@
                     любая достижимая для xi вершина соединена с ней хотя бы одним путем длины ноль (при i = j), 
                     один, два, …, или k ≤ n. Тогда достижимое множество для xi можно представить в виде:</p>
                     <p>R(xi)={xi}⋃Г(xi)⋃Г²(xi)⋃…⋃Г^k(xi),</p>
-                </p>
                 <p>где k имеет такое наименьшее значение, после которого R(xi) уже не изменяется, т.е. не наращивается.</p>
                 <p><b>Ограниченно достижимое множество обозначают через</b> Rk(xi). 
                 Это множество вершин, достижимых путем максимальной длины k (и менее).
@@ -81,10 +78,9 @@
     </div>
 
     <div class = "rectangle">
-            <p><a name="calc"></a></p>
-            <label class="size_text">Калькулятор:</label>
-                
-            
+        <p><a name="calc"></a></p>
+        <h3>Калькулятор:</h3>
+                  
         <div class="flex">
         <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
         <input class="inputCount" type="number" id="inputCount" name="matrix-size" min="1" required>
@@ -101,11 +97,8 @@
         
         <div id="matrix-container"></div>
       <button class ="anim_button"  onclick="addInputs1('inputContainer2', 'inputCount', '#a8b1e5')">Добавить поля</button>
-      <button onclick="readFile('inputContainer2', 'inputCount', '#a8b1e5')"margin="20px" class="anim_button">Загрузить из файла</button>
-      <button class="anim_button" style="display: none;" id="generateButton" onclick="generateMatrix('inputCount', 'inputContainer2')" margin="20px">Сгенерировать</button>
-      <button onclick="addGraph('2')" id="solveButton" margin="20px" class="anim_button" style="display: none;">Решить</button>
+      <button onclick="readFile('inputContainer2', 'inputCount', '#a8b1e5')" class="anim_button">Загрузить из файла</button>
+      <button class="anim_button" style="display: none;" id="generateButton" onclick="generateMatrix('inputCount', 'inputContainer2')">Сгенерировать</button>
+      <button onclick="addGraph('2')" id="solveButton" class="anim_button" style="display: none;">Решить</button>
     </div>
-            
-    
-
 </body>
