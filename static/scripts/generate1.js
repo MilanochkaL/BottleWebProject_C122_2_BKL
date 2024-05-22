@@ -1,14 +1,17 @@
-// Функция для добавления полей ввода в указанный контейнер
+// ������� ��� ���������� ����� ����� � ��������� ���������
 function addInputs1(inputContainer, count, color) {
-    let numberOfInputs = parseInt(document.getElementById(count).value);
-    if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 10) {
-        alert('Введите корректное число от 1 до 10. В противном случае что-то может пойти не так!');
-        return;
+    let numberOfInputs = parseInt(document.getElementById(count).value); // Получаем количество входов
+    if (isNaN(numberOfInputs) || numberOfInputs <= 0 || numberOfInputs > 10) { // Проверяем на корректность введенного значения
+        alert('Введите корректное число от 1 до 10. В противном случае что-то может пойти не так!'); // Выводим сообщение об ошибке
+        return; // Завершаем функцию
     }
 
-    let container = document.getElementById(inputContainer); // Это место для новых полей
+    const generateButton = document.getElementById('generateButton'); // Получаем кнопку "Генерировать"
+    generateButton.style.display = 'inline-block'; // Устанавливаем видимость кнопки
+
+    let container = document.getElementById(inputContainer); // Получаем контейнер для полей
     while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild); // Освобождаем место от старых элементов
+        container.removeChild(container.lastChild); // Удаляем старые элементы из контейнера
     }
 
     if (inputContainer != "inputContainer_first" && inputContainer != "inputContainer_second") {
@@ -20,40 +23,40 @@ function addInputs1(inputContainer, count, color) {
 
     let divNames = [];
     for (let j = 0; j < numberOfInputs; j++) {
-        let divName = `div${j}${inputContainer}`;
-        divNames.push(divName);
+        let divName = `div${j}${inputContainer}`; // Генерируем имя для нового div
+        divNames.push(divName); // Добавляем имя в массив
 
-        let div = document.createElement('div');
-        div.id = divName;
-        div.style = "display: flex"
-        container.appendChild(div); // Добавляем новое поле в контейнер
+        let div = document.createElement('div'); // Создаем новый div
+        div.id = divName; // Устанавливаем id для div
+        div.style.display = "flex"; // Устанавливаем стиль для flex
+        container.appendChild(div); // Добавляем div в контейнер
 
-        let container2 = document.getElementById(divName); // Это место для новых полей
+        let container2 = document.getElementById(divName); // Получаем внутренний контейнер
         for (let i = 0; i < numberOfInputs; i++) {
-            let input = document.createElement('input');
-            input.value = "0";
+            let input = document.createElement('input'); // Создаем новый input
+            input.value = "0"; // Устанавливаем значение по умолчанию
             if (i === j) {
-                input.value = "0";
-                input.setAttribute('readonly', '');
-                input.style = "width: 30px; margin: 3px; border-radius: 10px; border-width: 2px; border-style: solid;";
-                input.style.borderColor = color;
+                input.value = "0"; // Устанавливаем значение 0 для диагональных элементов
+                input.setAttribute('readonly', ''); // Устанавливаем только для чтения
+                input.style = "width: 30px; margin: 3px; border-radius: 10px; border-width: 2px; border-style: solid;"; // Устанавливаем стиль для input
+                input.style.borderColor = color; // Устанавливаем цвет рамки
             } else {
-                input.value = "0";
-                input.style = "width: 30px; margin: 3px; border-radius: 10px; border-width: 2px; border-style: solid;";
-                input.style.borderColor = color;
+                input.value = "0"; // Устанавливаем значение 0 для остальных элементов
+                input.style = "width: 30px; margin: 3px; border-radius: 10px; border-width: 2px; border-style: solid;"; // Устанавливаем стиль для input
+                input.style.borderColor = color; // Устанавливаем цвет рамки
                 input.oninput = function () {
-                    let input2 = document.getElementById(`dynamicInput${i}${j}${inputContainer}`); // Это место для новых полей
-                    input2.value = input.value;
+                    let input2 = document.getElementById(`dynamicInput${i}${j}${inputContainer}`); // Получаем второй input
+                    input2.value = input.value; // Устанавливаем значение второго input равным первому
                 };
             }
-            input.name = `dynamicInput${i}`; // Имена для каждого поля для избежания ошибок
+            input.name = `dynamicInput${i}`; // ����� ��� ������� ���� ��� ��������� ������
             input.id = `dynamicInput${j}${i}${inputContainer}`;
-            container2.appendChild(input); // Добавляем новое поле в контейнер
-            container2.appendChild(document.createElement('br')); // Предусматриваем дополнительное пространство между полями
+            container2.appendChild(input); // ��������� ����� ���� � ���������
+            container2.appendChild(document.createElement('br')); // ��������������� �������������� ������������ ����� ������
         }
     }
 
-    // Условия появления кнопок для страницы поиска подграфов
+    // ������� ��������� ������ ��� �������� ������ ���������
     if (document.getElementById('inputContainer_first').childElementCount > 0) {
         const genBtn1 = document.getElementById('genBtn1');
         genBtn1.style.display = 'inline-block';
@@ -75,27 +78,27 @@ function addInputs1(inputContainer, count, color) {
 
 
 function generateMatrix(size, inputContainer) {
-    let numberOfInputs = parseInt(document.getElementById(size).value);
-    let matrix = generateSymmetricMatrix(numberOfInputs);
-    fillMatrixInputs(matrix, 'dynamicInput', inputContainer);
+    let numberOfInputs = parseInt(document.getElementById(size).value); // Получаем количество входов
+    let matrix = generateSymmetricMatrix(numberOfInputs); // Генерируем симметричную матрицу
+    fillMatrixInputs(matrix, 'dynamicInput', inputContainer); // Заполняем поля ввода матрицы
 }
 
-// Функция генерации симметричной матрицы заданного размера
+// ������� ��������� ������������ ������� ��������� �������
 function generateSymmetricMatrix(size) {
     let matrix = [];
     for (let i = 0; i < size; i++) {
         let row = [];
         for (let j = 0; j < size; j++) {
-            if (i == j) {
-                row.push(0);
+            if (i === j) {
+                row.push(0); // Диагональный элемент устанавливаем равным 0
             }
             else if (i <= j) {
-                row.push(Math.round(Math.random()));
+                row.push(Math.round(Math.random())); // Генерируем случайное значение для верхнего треугольника
             } else {
-                row.push(matrix[j][i]);
+                row.push(matrix[j][i]); // Для нижнего треугольника берем значение симметрично относительно главной диагонали
             }
         }
-        matrix.push(row);
+        matrix.push(row); // Добавляем строку в матрицу
     }
     return matrix;
 }
@@ -103,41 +106,40 @@ function generateSymmetricMatrix(size) {
 function fillMatrixInputs(matrix, inputPrefix, inputContainer) {
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < matrix[i].length; j++) {
-            let input = document.getElementById(`${inputPrefix}${i}${j}${inputContainer}`);
-            input.value = matrix[i][j];
+            let input = document.getElementById(`${inputPrefix}${i}${j}${inputContainer}`); // Получаем элемент input по id
+            input.value = matrix[i][j]; // Устанавливаем значение в элемент input
         }
     }
 }
 
 function createGraph1(inputCont, graph) {
-    let container = document.getElementById(graph);
+    let container = document.getElementById(graph); // Получаем контейнер для графа
     while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild);
+        container.removeChild(container.lastChild); // Удаляем предыдущий граф
     }
-    let div = document.createElement('div');
-    div.id = `mynetwork${graph}`;
-    div.className = "mynetwork";
-    container.appendChild(div);
+    let div = document.createElement('div'); // Создаем новый div
+    div.id = `mynetwork${graph}`; // Устанавливаем id для нового div
+    div.className = "mynetwork"; // Устанавливаем класс для нового div
+    container.appendChild(div); // Добавляем новый div в контейнер
 
-    let inputContainer = document.getElementById(inputCont);
-    let matrixRows = inputContainer.children;
+    let inputContainer = document.getElementById(inputCont); // Получаем контейнер с входами
+    let matrixRows = inputContainer.children; // Получаем строки матрицы
     let nodes = [];
     let edges = [];
 
-    // Создание вершин
+    // �������� ������
     for (let i = 0; i < matrixRows.length; i++) {
-        nodes.push({ id: i + 1, label: `${i + 1}` }); // Добавляем узел с id и меткой (номер узла)
+        nodes.push({ id: i + 1, label: `${i + 1}` }); // ��������� ���� � id � ������ (����� ����)
     }
 
-    // Создание ребер
+    // �������� �����
     for (let i = 0; i < matrixRows.length; i++) {
-        let rowInputs = matrixRows[i].children; // Получаем дочерние элементы текущей строки матрицы
+        let rowInputs = matrixRows[i].children; // �������� �������� �������� ������� ������ �������
         for (let j = 0; j < rowInputs.length; j++) {
             let inputValue = rowInputs[j].value; // Получаем значение текущего input
             if (inputValue === '1' && i !== j) { // Если значение равно '1' и это не диагональный элемент
-                // Проверяем, что такого ребра еще нет в массиве edges
                 if (!edges.some(edge => (edge.from === i + 1 && edge.to === j / 2 + 1) || (edge.from === j / 2 + 1 && edge.to === i + 1))) {
-                    edges.push({ from: i + 1, to: j / 2 + 1 }); // Добавляем ребро в массив edges
+                    edges.push({ from: i + 1, to: j / 2 + 1 }); // ��������� ����� � ������ edges
                 }
             }
         }

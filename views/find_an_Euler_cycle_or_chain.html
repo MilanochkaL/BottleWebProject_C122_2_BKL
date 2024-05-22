@@ -1,9 +1,7 @@
-% rebase('layout.tpl', title='Эйлеров цикла', year=year)
-
 <body class="backgroun_find_an_Euler">
 	<div class="theory_Euler_div">
       <h1>Поиск Эйлерова цикла (или цепи) в Эйлеровом графе</h1>
-      <h3><a href="#calc">Перейти к калькулятору</a></h3>
+      <h2><a href="#calc">Перейти к калькулятору</a></h2>
       <div class="opred">
       <h3>Основные определения</h3>
       <p><b>Эйлеровым путем (англ. Eulerian path)</b> в графе называется путь, который проходит по каждому ребру, причем ровно один раз.</p>
@@ -19,7 +17,6 @@
          <li>Все вершины имели четную степень.</li>
          <li>Все компоненты связности, кроме, может быть, одной, не содержали ребер.</li>
        </ol>
-      </p>
       </div>      
       <label>Доказательство:</label>
       <div class="theory_and_img_2">
@@ -32,7 +29,6 @@
          <li style="font-size: 17px;">Если в графе существует более одной компоненты связности с ребрами, то очевидно,
          что нельзя пройти по их ребрам одним путем.</li>
        </ol>
-      </p>
           <div class="theory_and_img_el"> 
               <div>
                   <img src="static\images\find_an_Euler_cycle_or_chain_1.png" width="150px" height="150px" >
@@ -51,7 +47,6 @@
          <li>Все вершины имеют четную степень.</li>
          <li>Все компоненты связности, кроме, может быть, одной, не содержат ребер.</li>
        </ol>
-      </p>
       </div>
       <label>Доказательство:</label>
       <p>Необходимость мы доказали ранее. Докажем достаточность, используя индукцию по числу вершин n.</P>
@@ -80,7 +75,6 @@
          <li>Количество вершин с нечетной степенью меньше или равно двум.</li>
          <li>Все компоненты связности кроме, может быть одной, не содержат ребер.</li>
        </ol>
-      </p>
       </div>
       <label>Доказательство:</label>
       <p>Добавим ребро, соединяющее вершины с нечетной степенью. Теперь можно найти 
@@ -94,7 +88,6 @@
          <li>Входная степень любой вершины равна ее выходной степени. </li>
          <li>Все компоненты слабой связности кроме, может быть одной, не содержат ребер.</li>
        </ol>
-      </p>
       </div>
       <label>Доказательство:</label>
       <p>Доказательство аналогично случаю неориентированного графа. </p>
@@ -106,7 +99,6 @@
          для одной из которых deg+−deg−=1, а для другой deg+−deg−=−1. </li>
          <li>Все компоненты слабой связности кроме, может быть одной, не содержат ребер.</li>
        </ol>
-      </p>
       </div>
       <label>Доказательство:</label>
       <p>Соединим ориентированным ребром вершину с большей входящей степенью с вершиной с 
@@ -114,21 +106,21 @@
       после чего удалить добавленное ребро. Очевидно найденный цикл станет путем. </p>
       </div>
       <div class="theory_Euler_div">
-      <p><a name="calc"></a></p>
+      <p><a id="calc"></a></p>
       <div style="display: flex;">
         <h3 style="margin-bottom: 20px">Размерность матрицы:</h3> 
-        <input type="number" id="inputCount" name="matrix-size" min="1" style="margin: 15px; height=5px; width: 100px" required>
+        <input type="number" id="inputCount" name="matrix-size" min="1" required>
       </div>      
       <div style="display: flex;">
-            <div id="inputContainer2" style="margin-left: 20px; margin-bottom: auto; margin-top: auto;"></div>
+            <div id="inputContainer2"></div>
             <div id="graph_div"></div>
-            <div id="rez" style="margin: 20px; margin-bottom: auto; margin-top: auto;"></div>
+            <div id="rez"></div>
       </div>
       <div id="matrix-container"></div>
-      <button onclick="addInputs1('inputContainer2', 'inputCount', '#90b0b6')" margin="20px" class="anim_button">Добавить поля</button>
-      <button onclick="readFile('inputContainer2', 'inputCount', '#90b0b6')"margin="20px" class="anim_button">Загрузить из файла</button>
-      <button class="anim_button" style="display: none;" id="generateButton" onclick="generateMatrix('inputCount', 'inputContainer2')" margin="20px">Сгенерировать</button>
-      <button onclick="addGraph_3('3')" id="solveButton" margin="20px" class="anim_button" style="display: none;">Решить</button>
+      <button onclick="addInputs1('inputContainer2', 'inputCount', '#90b0b6')" class="anim_button">Добавить поля</button>
+      <button onclick="readFile('inputContainer2', 'inputCount', '#90b0b6')" class="anim_button">Загрузить из файла</button>
+      <button class="anim_button" style="display: none;" id="generateButton" onclick="generateMatrix('inputCount', 'inputContainer2')">Сгенерировать</button>
+      <button onclick="addGraph_3()" id="solveButton" class="anim_button" style="display: none;">Решить</button>
       
     </div>   
     

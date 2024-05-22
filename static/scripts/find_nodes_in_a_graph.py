@@ -49,8 +49,7 @@ def find_max_neighborhood(adjacency_matrix, k):  # Определяем функ
     def write_file_nodes(result):
         result_data = {"Execution Time": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'), "Original Matrix": adjacency_matrix, "Result": result}
         try:
-            # Открываем файл для чтения и декодируем JSON
-            with codecs.open('C:\\Users\\Надежда\\Desktop\\УП_02.02\\BottleWebProject_C122_2_BKL\\Rezult_nodes.json', 'r', encoding='utf-8') as f: 
+            with open('C:\\Users\\Надежда\\Desktop\\УП_02.02\\BottleWebProject_C122_2_BKL\\Rezult_nodes.json', 'r') as f:
                 results = json.load(f)
         except (FileNotFoundError, json.JSONDecodeError):
             results = {}  # Обработка исключений при чтении файла
@@ -66,10 +65,10 @@ def find_max_neighborhood(adjacency_matrix, k):  # Определяем функ
                 break  # Выходим из цикла
 
         if not matrix_exists:
-            results["all_results"].append(result_data)  # Добавляем результат в список
-         # Открываем файл для записи
-        with codecs.open('C:\\Users\\Надежда\\Desktop\\УП_02.02\\BottleWebProject_C122_2_BKL\\Rezult_nodes.json', 'w', encoding='utf-8') as file: 
-            json.dump(results, file, ensure_ascii=False, indent=4)  # Записываем результаты в файл
+            results["all_results"].append(result_data)
+
+        with open('C:\\Users\\Надежда\\Desktop\\УП_02.02\\BottleWebProject_C122_2_BKL\\Rezult_nodes.json', 'w', encoding='utf-8') as file:
+            json.dump(results, file, ensure_ascii=False, indent=4)
 
     powered_matrix = matrix_power(adjacency_matrix, k)  # Вычисляем k-ю степень матрицы смежности
 
