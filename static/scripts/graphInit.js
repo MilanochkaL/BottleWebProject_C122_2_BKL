@@ -1,22 +1,23 @@
-// Функция для добавления графа на веб-страницу
-function addGraph_3() {
-    Euler_cycle_js(); // Вызов функции, возможно, связанной с циклами Эйлера
-
-    // Очистка существующего контейнера с графом
-    let container = document.getElementById('graph_div');
-    while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild);
+//Функция для генерации выводла графа и вызова решения
+function addGraph(num) {
+    if (num === '3') {
+        Euler_cycle_js();
+    }
+    if (num === '2') {
+        Nodes_in_a_graph_js();
     }
 
-    // Создание нового элемента div для отображения сетевого графа
-    let div = document.createElement('div');
-    div.id = "mynetwork";
-    div.className = "mynetwork";
-    container.appendChild(div);
+    let container = document.getElementById('graph_div'); // Получаем контейнер для графа
+    while (container.hasChildNodes()) {
+        container.removeChild(container.lastChild); // Удаляем содержимое контейнера
+    }
+    let div = document.createElement('div'); // Создаем новый элемент div
+    div.id = "mynetwork"; // Устанавливаем id для div
+    div.className = "mynetwork"; // Устанавливаем класс для div
+    container.appendChild(div); // Добавляем div в контейнер
 
-    // Получаем контейнер с входными данными для матрицы смежности
-    let inputContainer = document.getElementById('inputContainer2');
-    let matrixRows = inputContainer.children;
+    let inputContainer = document.getElementById('inputContainer2'); // Получаем контейнер с входами
+    let matrixRows = inputContainer.children; // Получаем строки матрицы
     let nodes = [];
     let edges = [];
 
@@ -41,12 +42,12 @@ function addGraph_3() {
         }
     }
 
-    var options = {};
+    var options = {}; // Объект с опциями для графа
 
-    var networkContainer = document.getElementById('mynetwork');
+    var networkContainer = document.getElementById('mynetwork'); // Получаем контейнер графа
     var data = {
         nodes: nodes,
         edges: edges
     };
-    var network = new vis.Network(networkContainer, data, options);
+    var network = new vis.Network(networkContainer, data, options); // Создаем граф с помощью библиотеки vis.js
 }

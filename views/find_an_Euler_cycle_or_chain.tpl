@@ -128,7 +128,7 @@
       <button onclick="addInputs1('inputContainer2', 'inputCount', '#90b0b6')" margin="20px" class="anim_button">Добавить поля</button>
       <button onclick="readFile('inputContainer2', 'inputCount', '#90b0b6')"margin="20px" class="anim_button">Загрузить из файла</button>
       <button class="anim_button" style="display: none;" id="generateButton" onclick="generateMatrix('inputCount', 'inputContainer2')" margin="20px">Сгенерировать</button>
-      <button onclick="addGraph_3()" id="solveButton" margin="20px" class="anim_button" style="display: none;">Решить</button>
+      <button onclick="addGraph_3('3')" id="solveButton" margin="20px" class="anim_button" style="display: none;">Решить</button>
       
     </div>   
     

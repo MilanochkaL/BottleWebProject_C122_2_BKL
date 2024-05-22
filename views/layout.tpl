@@ -59,6 +59,7 @@
     <script src="/static/scripts/generate1.js"></script>
     <script src="/static/scripts/Euler_cycle.js"></script>
     <script src="/static/scripts/solve_isomorphic_subgraphs.js"></script>
+    <script src="/static/scripts/Nodes_in_a_graph.js"></script>
 
 </body>
 </html>

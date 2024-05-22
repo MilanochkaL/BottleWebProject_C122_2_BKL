@@ -4,10 +4,12 @@ This script runs the application using a development server.
 
 import bottle
 from bottle import Bottle, run, static_file, request, response, jinja2_template as template
+
 import json
 import os
 import sys
 import routes
+import find_nodes_in_a_graph as fm
 import find_an_Euler_cycle_or_chain as fe
 import find_a_given_subgraph as fs
 
@@ -30,6 +32,13 @@ if __name__ == '__main__':
     def euler_cycle():
         adjacency_matrix = request.json.get('matrix')
         return fe.find_eulerian_path_or_cycle(adjacency_matrix)
+
+    @bottle.post('/Nodes_in_a_graph')
+    def nodes_in_a_graph():
+        adjacency_matrix = request.json.get('matrix')
+        k = request.json.get('k')
+        return fm.find_max_neighborhood(adjacency_matrix,k)
+
     
     @bottle.post('/solve_isomorphic_subgraphs')
     def subgraphs():
