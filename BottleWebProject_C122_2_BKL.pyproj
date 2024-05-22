@@ -19,8 +19,7 @@
     <Name>BottleWebProject_C122_2_BKL</Name>
     <RootNamespace>BottleWebProject_C122_2_BKL</RootNamespace>
     <InterpreterId>MSBuild|Python9_1|$(MSBuildProjectFullPath)</InterpreterId>
-    <WebBrowserPort>
-    </WebBrowserPort>
+    <WebBrowserPort>60964</WebBrowserPort>
     <TestFramework>unittest</TestFramework>
     <UnitTestPattern>test*.py</UnitTestPattern>
     <UnitTestRootDirectory>.</UnitTestRootDirectory>

@@ -135,7 +135,7 @@
 </div>
 
 <div style="display: flex; justify-content: center;">
-    <div id="result_sub_div" style="display: none; width: 80%; background-color: #FFFF; border-radius: 20px; margin: 40px 0; padding: 40px; font-size: 20px; justify-content: center; align-items: center; text-align: center; ">
+    <div id="result_sub_div" style="display: none; width: 80%; background-color: #FFFF; border-radius: 20px; margin: 20px 0; padding: 40px; font-size: 20px; justify-content: center; align-items: center; text-align: center; ">
         <p><a name="result"></a></p>
         <div id="result_sub"></div>
     </div>
