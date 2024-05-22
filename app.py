@@ -45,7 +45,7 @@ if __name__ == '__main__':
         matrix1 = request.json.get('matrix1')
         matrix2 = request.json.get('matrix2')
 
-        # Выполните поиск изоморфных подграфов и верните результат
+        # Р’С‹РїРѕР»РЅРёС‚Рµ РїРѕРёСЃРє РёР·РѕРјРѕСЂС„РЅС‹С… РїРѕРґРіСЂР°С„РѕРІ Рё РІРµСЂРЅРёС‚Рµ СЂРµР·СѓР»СЊС‚Р°С‚
         return fs.find_subgraphs(matrix1, matrix2)
 
     @bottle.route('/static/<filepath:path>')
