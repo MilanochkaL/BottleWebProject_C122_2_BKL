@@ -47,9 +47,6 @@
     <Compile Include="test_Euler.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="test_selenium.py">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\" />
