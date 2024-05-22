@@ -21,6 +21,9 @@
     <InterpreterId>MSBuild|Python9_1|$(MSBuildProjectFullPath)</InterpreterId>
     <WebBrowserPort>
     </WebBrowserPort>
+    <TestFramework>unittest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,6 +38,7 @@
     <Compile Include="find_an_Euler_cycle_or_chain.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="find_nodes_in_a_graph.py">
     <Compile Include="find_a_given_subgraph.py">
       <SubType>Code</SubType>
     </Compile>
@@ -42,6 +46,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
+    <Compile Include="test_nodes_valid_input_matrix.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_nodes_isolated_matrix.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_nodes_value_k.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\" />
