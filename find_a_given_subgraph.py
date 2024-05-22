@@ -16,10 +16,11 @@ def is_isomorphic(g1, g2):
         return sum(graph[vertex])  # Возвращает сумму элементов в строке матрицы смежности
 
     def sort_vertices(graph):
-        return sorted(range(len(graph)), key=lambda v: (degree(graph, v), graph[v])) # Сортирует вершины графа по степени и номеру вершины
+       return sorted(range(len(graph)), key=lambda v: (degree(graph, v), graph[v])) # Сортирует вершины графа по степени и номеру вершины
 
     vertices1 = sort_vertices(g1)  # Сортируем вершины первого графа
     vertices2 = sort_vertices(g2)  # Сортируем вершины второго графа
+
 
     # Расширяет отображение вершин первого графа на вершины второго графа
     # mapping (dict): Текущее отображение вершин.
@@ -55,6 +56,8 @@ def find_subgraphs(graph, subgraph):
     m = len(subgraph)
     found_subgraphs = []
 
+    # С помощью библиотеки itertools для генерации всех возможных комбинаций вершин и 
+    # функцию is_isomorphic для проверки изоморфизма подграфов
     for vertices in itertools.combinations(range(n), m):
         # Создаем подграф, состоящий из выбранных вершин
         sub_graph = [[graph[i][j] for j in vertices] for i in vertices]
@@ -67,6 +70,7 @@ def find_subgraphs(graph, subgraph):
     if found_subgraphs:
         output = "Найденные подграфы:"
         for idx, vertices in enumerate(found_subgraphs, 1):
+            
             output += f"\nПодграф {idx}: {vertices}"
     else:
         output = "Подграфы не найдены."
